@@ -1,0 +1,24 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{Test ipotesi e GOF}
+%\PartialToc
+
+\keyword{Prob. Errore tipo I $\alpha$}: scarto $H_0$ quando \'e vera (falso positivo, loss,size,taglia,livello di significativit\'a $\alpha=\prob{(x\in C|H_0)}=\prob_0{(x\in C)}$.
+
+\keyword{Prob. Errore tipo II $\beta$}: probabilit\'a di accettare erroneamente $H_0$ (falso negativo, contaminazione), $\prob{(x\in\overline{C}|\non{H_0})}=\beta$. Potenza del test $1-\beta=\prob{(x\in C|H_1)}$ \'e la capacit\'a di distinguere ipotesi diverse da $H_0$.
+
+Fissato $\cl=\alpha$ impongo la condizione \[P_{\theta}[\delta(X)=d_1]=P_{\theta}[X\in S_1]\leq\alpha,\quad \forall\theta\in\Omega_H\]
+minimizzo $P_{\theta}[\delta(X)=d_0]$ $\forall\theta\in\Omega_K$ equiv. to maximize
+\[1-\beta=P_{\theta}[\delta(X)=d_1]=P_{\theta}[X\in S_1], \forall\theta\in\Omega_K\]
+Di solito la condizione precedente implica size of test $\sup_{\Omega_H}{P_{\theta}[X\in S_1]}=\alpha$.
+
+\section{Ipotesi semplici: UMP - Lemma NP}
+
+\section{LR test}
+
+Testing sub-model: $\Omega_0\subset\Omega$, for testing $H_0: \theta\in\Omega_0$ vs $\theta\notin\Omega_0$ the generilez LR statistics is
+\[\Lambda=\frac{\max_{\theta\in\Omega_0}L(\theta)}{\max_{\theta\in\Omega}L(\theta)}\]
+
+\end{document}

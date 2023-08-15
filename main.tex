@@ -1,0 +1,66 @@
+\makeatletter
+\let\@starttocorig\@starttoc
+\makeatother
+\documentclass[oneside,20pt,fleqn,extrafontsizes]{memoir}
+%%% color definition names: xcolor
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{wocrit}{rgb}{0.75, 0.25, 0.0}
+\definecolor{todo}{rgb}{0.75, 0.0, 0.2}
+%%%%%%%%%%%% Hyperref package
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%%% Import other packages%
+\usepackage{usepkg}
+%% import moodded thing
+\usepackage{mathOp}
+%%%%%%%%%%%%%%%%%% refname, titletoc, titlesec setting
+\def\csubtoc{1}%\startcontents[chapters]
+\usepackage{titleT-ref}%toc depth
+\usepackage{localF}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%Geometry package
+\usepackage{mygeometry}
+%%%%%%%
+\usepackage{fancypkg}%%%import fancy package with memoir correction
+%%%%%%%%%%%%%%%%%% setlength
+\usepackage{mylength}
+\linespread{0.5}
+%%%%%%% META
+\title{workout physics: l'Essenziale}
+%%import makeidx
+%\usepackage{makeidx}
+%%% COUNTERS
+\setsecnumdepth{subsection}
+\setcounter{tocdepth}{0}       % chapter
+%\settocdepth{chapter}
+\regtotcounter{chapter}
+\newcounter{cherrychapter}%[chapte]
+\setcounter{cherrychapter}{1}
+\newcounter{partworkouts}%[chapte]
+\setcounter{partworkouts}{1}
+%%%% import functions
+\usepackage{functions}
+\usepackage{sources}
+%%%%%%%%%%%%%%%%%%%% MULTINDExssss (number of chapters)
+%\makeindex[1]%biasmomentumoggi]%chapters
+%\makeindex[2]%meditazione]
+%\makeindex[3]%nitidezza]
+%\makeindex[4]%teatro]
+\begin{document}%BEGIN
+\pagestyle{mystyle}%% mystyle defined in usepkg
+\renewcommand*{\contentsname}{\label{toc}{Table of Contents}}%%\printcontents without head/hypereff
+%\makeatletter
+%\renewcommand*{\@tocmaketitle}{\label{toc}{Table of Contents}}
+%\makeatother
+\maketitle
+\listoftodos
+\tableofcontents*
+\subfile{proc}
+%\stopcontents[chapters]
+\end{document}

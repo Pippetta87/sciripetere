@@ -1,0 +1,63 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{Accretion disk}
+%\PartialToc
+
+\section{Enhanced viscosity: evolution of surface density}
+
+$\eta$ Viscosity= Stress/(strain/time), (strain/time)=shear rate - shear stress $\tau_{y,x}=-\mu\TDy{y}{u_x}$
+
+\section{Temperature profile}
+\begin{itemize}
+\item stellar irradiation: $P_i=\pi\epsilon_iR^2F_{\odot}$, $P_o=4\pi\epsilon_oR^2\sigma T_e^4$ - $T_{equi}=280\si{\kelvin}(\frac{a}{\SI{1}{\astronomicalunit}})^{-1/2}(\frac{M_*}{\msun})$
+\item viscous heating
+\end{itemize}
+The torque $\PDy{r}{G}\Delta r$ compie lavoro  ad un rate
+\begin{equation*}
+\Omega\PDy{r}{G}\Delta r=[\PDof{r}(G\Omega)-G\TDy{r}{\Omega}]\Delta r
+\end{equation*}
+
+
+\section{Gas-planet interaction}
+ 
+\subsection{Impulsive approx}
+
+planet migration (Lubow ida 10): pg 3
+Particle $\Omega(r)$ approach planet $\Omega_p=\Omega(a)$ on a circular orbit: small deflection $r-a\gtrsim R_H$
+ 
+
+
+\section{solid accretion}
+
+\subsection{Accrescimento dei planetesimi: collisioni.}
+\begin{itemize}
+\item $r_{pl}<b<\frac{Gm_{pl}}{v_r^2}=b_0$: incontro ravvicinato ($|U_{max}|>E_{kin}^{\infty}$ l'energia potenziale nel momento di massima interazione sovrasta energia cinetica a infinito).
+\item $b>(\frac{m_{pl}}{3\msun{}})\expy{\frac{1}{3}}a=d_{Hill}$: passaggio a grande distanza.
+\item $b_0<b<d_{Hill}$: deflessioni di direzione e verso casuali.
+\end{itemize}
+
+{Scattering $b>r_{pl}$: variazione velocit\'a relativa}
+\begin{equation*}
+\delta v_r=\underbrace{\frac{Gm_{pl}}{b^2}}_{\exv{a}}\underbrace{\frac{2b}{v_r}}_{\exv{\tau_{int}}}=\frac{2Gm_{pl}}{bv_r}
+\end{equation*}
+
+\begin{equation*}
+b_0<b<d_{Hill}:\quad [\TDy{t}{v_r^2}]_{enc}=\int_{r_{pl}}^d2\pi bv_r\frac{\sigma n}{m_{pl}v_r}(\frac{2Gm_{pl}}{bv_r})^2\,db
+\end{equation*}
+
+{Urti anelastici: impatti}
+\begin{equation*}
+[\TDy{t}{v_r^2}]_{imp}=\pi r_{pl}^2(\frac{\sigma n}{m_{pl}v_r})v_r(-v_r)
+\end{equation*}
+
+\subsection{Accretion rate: collisions with stick prob 1}
+\begin{align}
+&\TDy{t}{M}=\underbrace{\rho_p}_{n_mm}v_r\pi R^2[1+(\frac{v_e}{v})^2]\\
+&\rho_p\approx\frac{\Sigma}{2a\sin{i}}\approx(\frac{\sqrt{3}}{2})(\frac{\Sigma\Omega}{v})
+\end{align}
+
+\chapter{Core Accretion}
+
+\end{document}

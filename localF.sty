@@ -1,0 +1,108 @@
+\ProvidesPackage{localF}
+%\def\a#1{\def\b##1{...}}
+\newcommand{\iidrv}[1][X]{$#1_1,\ldots,#1_{n}$}
+\newcommand{\adjm}[1]{\resizebox{.99\hsize}{!}{$#1$}\vspace{10px}}
+
+%\Newcommand{\PartialToc}: moved in titleT
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+
+\makeatletter
+\def\gnewcommand{\g@star@or@long\new@command}
+\def\grenewcommand{\g@star@or@long\renew@command}
+\def\g@star@or@long#1{% 
+  \@ifstar{\let\l@ngrel@x\global#1}{\def\l@ngrel@x{\long\global}#1}}
+\makeatother
+
+\newcommand{\bibheader}{bibchap} %%init bibheader var
+
+%redefining part
+%\let\Oldpart\part
+%\newcommand{\parttitle}{}
+%\renewcommand{part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
+%chapter name
+\makeatletter%% vedi nameref
+\newcommand*{\currentname}{\@currentlabelname}
+ \newcommand{\linkdest}[1]{\hypertarget{#1}{}}
+\makeatother
+
+\def\headtoccolor{bulgarianrose}
+\makeatletter
+% A modification of the kernel's \@dottedtocline,
+% suppressing the leaders (dots) and page number
+% A variation of Martin Scharrer's answer:
+% http://tex.stackexchange.com/a/10189
+\def\@nodottedtocline#1#2#3#4#5{%
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2 \relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3 \relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\hfill\null\par}}
+\newcommand*\l@heading{\@nodottedtocline{0}{0em}{0em}}
+\makeatother
+
+%headinginfo 
+  \newcommand\headinginfo[1]{%
+  \addcontentsline{key-\thecherrychapter}{heading}{\textcolor{bulgarianrose}{{#1}}}%
+  \addtocontents{key-\thecherrychapter}{\vspace{5pt}}}
+
+%% list of keywords
+
+\newcommand\keyword[1]{%
+  \noindent%
+  {#1}%
+  \phantomsection% comment out if hyperref is not used
+  \addcontentsline{key-\thecherrychapter}{figure}{#1}
+}
+\makeatletter
+\newcommand{\listofkeywordsbasic}{%
+  \@starttocorig{key-\thecherrychapter}
+}
+\makeatother
+\newcommand\listkeywordsname{KEYWORDS}
+\newcommand\listofkeywords{%
+  \section*{\listkeywordsname}\listofkeywordsbasic
+}
+
+%% list of workout per part
+\newcommand\workout[1]{%
+  \noindent%
+  {#1}%
+  \phantomsection% comment out if hyperref is not used
+  \addcontentsline{key-\thepartworkouts}{figure}{#1}
+}
+\makeatletter
+\newcommand{\listofworkoutsbasic}{%
+  \@starttocorig{key-\thepartworkouts}
+}
+\makeatother
+\newcommand\listofworkoutsname{\textcolor{bulgarianrose}{WORKOUTS}}
+\newcommand\listofworkouts{%
+  \section*{\listofworkoutsname}\listofworkoutsbasic
+}
+
+%list of todo
+\newcounter{todokey}%conta i todo totali per auto ref
+\newcounter{todosectionlist}% conta i todo prima di keywordlist
+\makeatletter
+\newcommand\todo[2][todo-\thetodokey]{%todo
+	\addtocounter{todokey}{1}
+	\noindent{%
+		\color{todo}{#2}%
+	}%
+	\phantomsection% comment out if hyperref is not used
+	\linkdest{#1}%
+	\addcontentsline{todo}{figure}{\textbullet\protect\hyperlink{#1}{#2}\hspace{1mm}}%
+}
+\newcommand{\listoftodosbasic}{%listoftodos
+	\@starttocorig{todo}
+}
+\newcommand\listtodosname{TODO}%listoftodo
+\newcommand\listoftodos{%
+\listtodosname\phantomsection: \listoftodosbasic}
+\makeatother
+
+\newcommand{\xaumenta}[1]{${#1}\uparrow$}
+\newcommand{\xdiminuisce}[1]{${#1}\downarrow$}

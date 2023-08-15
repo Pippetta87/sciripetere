@@ -1,0 +1,155 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{stahler palla - clouds observations}
+%\PartialToc
+
+\section{ISM}
+
+\begin{itemize}
+\item Galactic gas. HI: $E=\SI{13.6}{\ev}n\expy{-2}$: UV Lyman series $2\to1$-$\Lya$ (\SI{1216}{\angstrom}), $3\to1$-$\Lyb$ (\SI{1026}{\angstrom}), balmer serie-$3\to2$ ($\Ha$: \SI{6563}{\angstrom}). Hyperfine traansition from higher excited parallel e-spin and p-magnetic moment (some fraction of collisionally excited H deexcite through photon emission) - convert column density to volume density require knowledge of location of emitting gas: overall shift in peak intensity steam for diff rotation of galaxy which is known thus analysis of emission profile in many directions yields number density $n_{HI}$; 21cm-absorption profile probes gas temperature. HI confined in clouds +warm unconfined component.
+Molecular Gas: CO is strong emitter - molecular clouds optically thick to \SI{2.6}{\milli\meter} line (trace total $H_2$ in the cloud); $H_2$ distribution in galxy peaks at \SI{6}{\kilo\parsec} related to star formation and little outside \SI{10}{\kilo\parsec}, more confined to g-plane.
+HII regions around O/B stars: stellar Lyman continuum ionized for several parsec - emission from heavier allow composition reconstruction / absorption from star behind HI cloud: HII of M42 Z depleted (segregated in dust).
+Phases of atomic components: cooling (low density $\Lya$ line, higher density CII \SI{158}{\micro\meter} transition) heating (starlight causes \Pelectron emission from dust grains) terms determine T-eq (for \SI{1}{\per\cubic\cm} \SI{e4}{\kelvin}) what state matches known interstellare pressure?
+\item Interstellar dust. Extinction $m_{\lambda}=M_{\lambda}+5\log{(\frac{r}{\SI{10}{\parsec}})}+A_{\lambda}$, color excess $E_{12}=A_{\lambda_1}-A_{\lambda_2}$ both proportional to column density of dust on LOS ($\frac{E_{\lambda-V}}{E_{B-V}}=\frac{A_{\lambda}}{E_{B-V}}-\frac{A_V}{E_{B-V}}=\frac{A_{\lambda}}{E_{B-V}}-R$), assuming $A\approx0$ for long wavelength.
+$I_{\nu}\Delta\nu\Delta A\Delta\Omega$ is energy per unit time between $[\nu,\nu+\Delta\nu]$ propagating normal to area $\Delta A$ within $\Delta\Omega$n (flux across surface with normal $\hat{z}$ is energy per unit area per unit time $F_{\nu}=\int\mu I_{\nu}\,d\Omega$, $\mu=\hat{n}\cdot\hat{z}$ cosine between propagation direction and normal), total specific energy density $u_{\nu}$ and mean intensity $J_{\nu}$ - $\Delta I_{\nu}=-\rho\kappa_{\nu}I_{\nu}\Delta s+j_{\nu}\Delta s$; at $\lambda$ of negligible dust emssion $I_{\lambda}(r)=I_{\lambda}(R_*)\exp{-\Delta\tau_{\lambda}}$ and flux at r much greater than $R_*$ ($\mu\approx1$) and $\Delta\Omega=\pi\frac{R_*^2}{r^2}$: $F_{\lambda}=\pi I_{\lambda}(R_*)(\frac{R_*}{r})^2\exp{-\Delta\tau_{\lambda}}$ - $A_{\lambda}=2.5\log{e}\Delta\tau_{\lambda}$.
+Thermal dust emission $T_d$ different from gas ($\frac{\nu_M}{T}=\SI{5.88e10}{\hertz\per\kelvin}$, $\lambda_MT=\SI{0.29}{\cm\kelvin}$). Efficiency of extinction: $\rho\kappa_{\nu}=n_d\sigma_dQ_{\nu}$, $Q_{\lambda}=0.14\frac{A_{\lambda}}{E_{B-V}}$ - $Q_{\lambda}\propto\invers{\lambda}$ in optical, local maximum at longer $\lambda=\SI{10}{\micro\meter}$, peak in UV \SI{2200}{\angstrom} - at far IR and mm ISM is transparent so we observe emission from heated dust clouds. Received flux $F_{\lambda}=B_{\lambda}(T_d)\Delta\Omega\Delta\tau_{\lambda}$ that yields $\Delta_{\lambda}(\ll1)$ ($T_d$and $A_V$ determination is problematic so $Q_{\lambda}$ is poorly determined): $\SI{30}{\micro\meter}\leq\lambda\SI{1}{\milli\meter}$ $\lambda\expy{-\beta}$ - physical agglomeration in denser regions. Gemoteric cross-section per H atom $\Sigma_d=\frac{n_d\sigma_d}{n_H}=\frac{(Ln_d)\sigma_d}{(Ln_H)}$.
+\item Molecular clouds. Diffuse clouds: H atomic/molecular, $A_V\approx1$ - are minor fraction of IS gas and don't produce stars; observation of \SI{2.6}{\milli\meter} line of $^{12}C^{16}O$ show that OB association are related with giant molecular clouds ($A_V\approx2$, $n_H\approx\SI{100}{\per\cubic\cm}$, $L\approx\SI{50}{\parsec}$, $T\approx\SI{15}{\kelvin}$, $M\approx\num{e5}\msun$) - map of molecular cloud from doppler effect given known law of galactic rotation. If line is optically thick we can use rarer isotopes. Volume of complexes are filled by dense clumb and less dense atomic/molecular constituent. Formed through clamps accumulation prob. as gas inflow in arms potential well (clustering of clouds along spiral arms) and condense thanks to self-shielding.
+\item Magnitude of ''Random'' velocity dispersion of clumps within complex consistency with gravitational field. EOM $\rho\frac{D\vec{u}}{Dt}=-\nabla P-\rho\nabla\phi+\frac{1}{c}\vecp{j}{B}\to-\nabla P-\rho\nabla\phi+\frac{1}{4\pi}(\vec{B}\cdot\nabla)\vec{B}-\frac{1}{8\pi}\nabla|B|^2$ third term repr. tension associted with curved field lines and last gradient of scalar magnetic pressure: scalar produc of above eq integrated over V give virial theorem $\frac{1}{2}\TtwoDy{t}{I}=2T+2U+W+M$ - which terms balance gravitational term W?
+$\frac{U}{|W|}\approx\frac{MRT}{\mu}\invers{(\frac{GM^2}{R})}=\num{3e-3}\invers{(\frac{M}{\num{e5}\msun})}(\frac{R}{\SI{25}{\parsec}})(\frac{T}{\SI{15}{\kelvin}})$, polarization of starlight reveal large scale B-field trhoughout galaxy plane: $\frac{M}{|W|}=\frac{|B^2|R^3}{6\pi}\invers{(\frac{GM^2}{R})}=0.3(\frac{B}{\SI{20}{\micro\gauss}})^2(\frac{R}{\SI{25}{\parsec}})^4(\frac{M}{\num{e5}\msun})\expy{-2}$ (B-field strenght measured from Zeeman splitting HI-$21 cm$ line or OH-$18 cm$) - magnetic force act perpendicular to B-field - clouds can collapse to a plane sliding along well-ordered field: not evident in giant complex - feild distorsion arise from MHD waves, contribute from kinetic energy (clump's random motion) $\frac{T}{|W|}\approx\frac{1}{2}M\Delta V^2\invers{(\frac{GM^2}{R})}=0.5(\frac{\Delta V}{\SI{4}{\kilo\meter\per\second}})^2\invers{(\frac{M}{\num{e5}\msun})}(\frac{R}{\SI{25}{\parsec}})$ - $\Delta V$ determined by broadening of spectral lines, generally CO - $\Delta V\approx T$, ie $T\approx|W|$ and equipartition between kinetic energy and internal magnetic field: exchange through hydromagnetic waves
+\end{itemize}
+
+\section{Clouds: dense cores and Bok globules}
+\todo{Line broadening: Stahler Palla - Appendix E}
+\begin{itemize}
+\item Quiscent gas: Larson law $\Delta V=\Delta V_0(\frac{L}{L_0})^n$ where $n\approx0.5$, $\Delta V_0\approx\SI{1}{\kilo\meter\per\second}$, $L_0=\SI{1}{\parsec}$ (column density unchanged from cloud to cloud: in facts slow increases in proportional $A_V$ for denser/smaller clouds; prob the non thermal $\Delta V$ is induced by MHD waves). Transition to thermal velocity at scale $L_{therm}=\frac{3RTL_0}{\mu\Delta V_0^2}=\SI{0.1}{\parsec}\frac{T}{\SI{10}{\kelvin}}$ hence dense cores responsable for star formation: typ \SI{e4}{\per\cubic\cm} - optic thin for radio lines (excited emission by collisions with $H_2$: threshold density) of $NH_3$ (\SI{1.3}{\cm}), $^{12}C^{18}O$, $CS$: $T_A(V_r)\propto\exp{(-\frac{m_{NH_3V_r^2}}{2kT})}$, $\Delta V_{FWHM}^2(tot)=therm+turb=(\SI{0.19}{\\kilo\meter\per\second})^2$ (smaller region are less turbulent) - CS has higher density thr than $NH_3$ but extends further out (CS stick to dust grain). Embedded p-l source: those who don't have optical counterpart are associated with outflow (detected in CO) - dense core with embedded optically invisible stars includes core with higher $NH_3$ line width.
+\item B-field. Promising tech is observation of polarized light sub-mm emission from dust
+\item $\frac{T_{rot}}{|W|}\approx\frac{\Omega^2 L^3}{24GM}=\num{e-3}(\frac{\Omega}{\SI{1}{\kilo\meter\per\second\per\parsec}})^2(\frac{L}{\SI{0.1}{\parsec}})^3\invers{(\frac{M}{10\msun})}$ - rotation has effects on collapse not on clouds structure.
+\item Bok globules: dense compact regions not embedded in larger complex
+\item Produce individual star and binary. What are cloud fragments that give rise to high mass stars?
+\end{itemize}
+
+\chapter{stahler palla (253)- Clouds equilibrium}
+%\PartialToc
+
+\section{Equilibrium of forces in molecular clouds: thermal pressure and rotation}
+Collapse is localized within lorge complexes - since most molecular gas is not collapsing we investigate equilibrium of forces under which clouds can last over long period
+\subsection{Equilibrium of thermal pressure and self-gravity} isothermal first approximation for dense core. Lane-Eden equation: gravitatonal stability and critical lenght scale using isothermal Lane-Emden model (for stable cloud increases of $P_0$ causes increase of internal pressure: clouds of low density constrast are confined by external pressure, all clouds with $\frac{\rho}{\rho_c}14.$ at right of first maximum are gravitationally unstable - $M_{BE}=\frac{m_1a_T^4}{P_0\expy{1/2}G\expy{3/2}}$). Jeans classics analysis of self-graviting waves propagating through uniform medium: $\lambda_J=\sqrt{\frac{\pi c_s^2}{G\rho_0}}$ - dense core/Bok globe are close to Instability
+\subsection{rotation support}
+Dense cores have measured rotation rate (\SI{1.27}{\cm} line of $NH_3$ and others - ch3), and gradient in radial velocity from CO mapping of GMC. Cyl symm-sys specific AM about z $j=ou_{\phi}=r\sin\theta u_{\phi}$: centrifugal force per unit mass $j^2/o^3$ which have to be balanced in EOM, centrifugal potential $\Phi_{cen}=-\int_0^oj^2/o^3\,do$ so we can extendend the non rotating case. Numerical methods: trial density.
+\section{MHD equations}
+As we go from lower to higher density object $M$, $T$, $W$ becomes comparable while observed $B_{\parallel}$ increases: flux freezing - magnetic field lines tethered to the gas - MHD equations:
+\begin{align*}
+&\nabla\wedge\vec{B}=\frac{4\pi}{c}\vec{j}\\
+&\vec{j}=n_ie\vec{u}_i-n_ee\vec{u}_e=n_ee(\vec{u}_i-\vec{u}_e)
+\end{align*}
+neglected displacement current $\frac{1}{c}\PDy{t}{\vec{E}}$ for low frequencies interesting here.
+In SR of neutral matter moving at $\vec{u}$: $\vec{j}'=\sigma \vec{E}'=\vec{j}$  and $\vec{E}'=\vec{E}+\frac{\vec{u}}{c}\wedge\vec{B}$ so fundamental MHD equation for B is
+\[\TDy{t}{\vec{B}}=\nabla\wedge(\vec{u}\wedge\vec{B})-\nabla\wedge(\frac{c^2}{4pi\sigma}\nabla\wedge\vec{B})\] - we can neglect Ohmic dissipation and obtain flux freezing only if $\frac{\sigma L^2}{c^2}$ much greater than any timescale of interest 
+\subsection{Estimating conductivity}
+For conduction electrons $\vec{u}_e$ includes both helical gyration about $\vec{B}$ and smoother drift the latter changes stochastically due to collisions with chiefly $H_2$ that exert effective drag an electrons that opposes acceleration from ambient electric field establishing steady state drift velocity - steady state EOM for electrons and ions (average mass $28m_H$, $Fe^+$, $Mg^+$) in comoving SR
+\begin{align*}
+&0\approx\vec{a}=-en_e(\vec{E}'+\frac{\vec{u}_e'}{c}\wedge\vec{B}')+n_ef_{en}'\\
+&0=en_e(\vec{E}'+\frac{\vec{u}_i'}{c}\wedge\vec{B}')+n_ef_{in}'\\
+&f_{en}'=-nm_e\exv{\sigma_{en}u_e'}\vec{u}_e'\\
+&f'_{in}=-nm_n\exv{\sigma_{in}u_i'}\vec{u}_i'
+\end{align*}
+drag exerted on electron by sea of neutrals - in each collision with heavy neutral electron gain $-m_e\vec{u}_e'$ and number of collisions per unit time is $n\exv{\sigma_{en}u_e'}$: \[\sigma=\frac{n_ee^2}{n}[\frac{1}{\exv{\sigma_{en}u_e'}m_e}+\frac{1}{\exv{\sigma_{in}u_i'}m_n}]\] in molecular clouds of solar composition $\exv{\sigma_{en}u_e'}\approx\SI{1.0e-7}{\cubic\cm\per\second}$, $\exv{\sigma_{in}u_i'}\approx\SI{1.5e-9}{\cubic\cm\per\second}$ so timescale for ohmic dissipation for clump within GMC $L\approx\SI{1}{\parsec}$, $n\approx\SI{e3}{\per\cubic\cm}$: $\sigma L^2/c^2\approx\SI{e17}{\year}$.
+\subsection{Flux freezing}
+\begin{itemize}
+\item Induction equation: Faraday $\vecp{\nabla}{E}=-\PDy{t}{\vec{B}}$, Ampere $\vecp{\nabla}{B}=\mu_0\vec{j}$ and Ohm $\vec{E}+\vecp{v}{B}=\vec{j}/\sigma$ law where $\vec{v}$ is the velocity of the field hence $\TDy{t}{\vec{B}}=\eta\nabla^2\vec{B}+\nabla\wedge(\vecp{v}{B})$. \keyword{Magnetic Reynolds number}: $\eta\nabla^2\vec{B}\approx\frac{\eta B}{L^2}$, $\nabla\wedge(\vecp{v}{B})\approx\frac{VB}{L}$ whose ratio is $R_m=\frac{LV}{\eta}$
+\item Infinite conductivity ($\eta\to0$). Change of magnetic flux over time: first term due to change of B with time, second due to change of integral region due to gas motion ($d\vec{S}=\vec{v}\wedge d\vec{s}$), then using Stokes' theorem ($\int\nabla\wedge\vec{A}=\int\vec{A}\cdot d\vec{s}$)
+\begin{align*}
+&\TDy{t}{\Phi_B}=\TDof{t}\int\vec{B}\cdot d\vec{S}=\int_S\PDy{t}{\vec{B}}\cdot d\vec{S}\\
+&+\oint_{C}\vec{B}\cdot\vec{v}\wedge d\vec{l}\\
+&\TDy{t}{\Phi_B}=\int[\PDy{t}{\vec{B}}-\nabla(\vecp{v}{B})]\cdot d\vec{S}\\
+&=0=\int_C[\vecp{u}{B}\cdot d\vec{s}-\vec{B}\cdot(d\vec{s}\wedge\vec{u})]
+\end{align*}
+Flux freezing: magnetic field is tied to motion of the fluid/gas constrained by field configuration: $M$ and $T$ are comparable in most clouds
+\end{itemize}
+\subsection{Ideal MHD breakdown}
+If $1\msun$ sphere within dense core with $n_{H_2}=\SI{e4}{\per\cubic\cm}$ and $R_0=\SI{0.07}{\parsec}$ is threaded by uniform magnetic field of strenght $B_0\approx\SI{30}{\micro\gauss}$: while this sphere becomes a T-Tauri the radius becomes $R_1\approx5\rsun=\SI{3e11}{\cm}$ in case of flux freezing $BR^2$ remains constant leading to $B_1$ four order magnitude greater than observed.
+\begin{itemize}
+\item Ambipolar diffusion: neutral species slip past and contraction proceed
+\item Entanglement of field can lead to strong Ohmic dissipation through magnetic reconnection (magnetic topology is re-arranged and magnetic energy is converted to kinetic/thermal energy and particle accel.)
+\end{itemize}
+\section{Magneto-static configuration}
+\subsection{Analogy with rotating structures}
+Freezing of field lines during contraction suggest similarity between magnetic equilibrium structure and rotating non magnetic structure: internal distro of magnetic flux is inherited from earlier more rarefied environment just as the run of specific angular momentum - consider condensation from configuration of uniform straight magnetic field along z $\vec{B}_0$ so matter can slide along field until stopped by thermal pressure gas moving orthogonally is retarded by pressure and magnetic tension (bending of field lines)
+\subsection{Magnetized collapse equilibrium: equations for magnetic flux and gravitational potential}
+\begin{align*}
+&0=-c_s^2\nabla\rho-\rho\nabla\phi_g+\frac{\vec{j}}{c}\wedge\vec{B}
+\end{align*}
+B is poloidal (lies in $\varpi-z$ plane) then ampere law implies $\vec{j}$ is toroidal (pointing in $\phi$ direction): magnetic force per unit volume has components along $\varpi$ and $z$. The problem is solved in magnetic flux contained within surface generated by rotating any field line about the axis $\Phi_B$, and $\Phi_g$:
+\begin{align*}
+&\Phi_B=\int_S(\nabla\wedge\vec{A})d^2x=2\pi\varpi A_{\phi}\\
+&\vec{B}=-\frac{\hat{e}_{\phi}}{2\pi\varpi}\wedge\nabla\Phi_B
+\end{align*}
+where we've used Stokes' ($\oint_{\Gamma}\vec{F}\cdot d\vec{F}=\int_S\nabla\wedge\vec{F}\cdot d\vec{S}$); so $\Phi_B$ don't varies along field line, hydro-balance means $\rho\exp{\Phi_g/c_s^2}$ is conserved along field lines; after some manipulation force balance reduces to
+\begin{align*}
+&\frac{j_{\phi}}{2\pi\varpi c}=\TDy{\Phi_B}{q}\exp{-\Phi_g/c_s^2}\\
+&q=c_s^2\rho\exp{\Phi_g/c_s^2}
+\end{align*}
+Numerical calculation is needed to solve field equations for $\Phi_B$, $\Phi_g$ and relation $q(\Phi_B)$
+\subsection{Critical mass}
+Models variing nondimensional cloud mass with fixed $\xi_0=\sqrt{\frac{4\pi G\rho_0}{c_s^2}}R_0$ non dimensional radius and magnetic to thermal pressure ratio $\alpha=\frac{B_0^2}{8\pi P_0}$:
+\begin{align*}
+&m_c\approx1.2+0.15\alpha\expy{1/2}\xi_0^2\\
+&M_c\approx M_{BE}+M_{\Phi}\\
+&M_{\Phi}=\propto\frac{\Phi_{cl}}{G^{1/2}}\tag{$\propto$ magnetic flux threading the cloud}
+\end{align*}
+In non-magnetized case squeezing $M<M_c$ increasing $P_0$ causes decline of $M_{BE}$ until collapse but in magnetized case $M_{\Phi}$ remains the same until flux freezing apply.
+
+For $M_{BE}\ll M_{\Phi}$ all equilibrium configuration resemble flat slab: stability for $M<M_{\Phi}$ - $\frac{\Sigma_c}{B_c}<0.17G^{-1/2}$ - consider a slab $\Sigma_0$ with orthogonal $B_0$, un cerchio di raggio $\varpi$ racchiude una massa $\pi\Sigma_0\varpi_0^2$ dopo una contrazione frazionale $\epsilon$ la forza gravitazionale addizionale per unit\'a di massa al bordo del cerchio \'e $F_G\approx2\pi\epsilon G\Sigma_0\varpi_0^2/\varpi_0^2$ e in direzione opposta la tensione magnetico determina una forza per unit\'a di massa $F_B=J\frac{B_z}{c\Sigma_0}$ where $J=c|B_{\varpi}|/2\pi$ is the volume density current integrated over thickness, which is due to bending of field lines and flow azimuthally (leggi $\hat{\phi}$?) and $B_{\varpi}$ is small radial component generated by contraction - assuming very low density outside the slab $\nabla\wedge\vec{B}=0$, if $\Delta z$ is the height above which field relax to its straight configuration we have $B_{\varpi}\approx2\epsilon B_0(\Delta z/\varpi)$, since as result of flux freezing $B_z$ at disk center increases by $2\epsilon B_0$ it's $B_{\varpi}\approx2\epsilon B_0(\Delta z/\varpi)$ on the other end $\nabla\cdot\vec{B}=0$  and so $\Delta z\approx\varpi$ and $B_{\varpi}\approx2\epsilon B_0$: magnetic tension to exceed gravity $F_B>F_G$ or $(\Sigma_0/B_0)^2<1/(2\pi^2G)$ (ok within factor 2).
+Max stable mass for cold magnetized cloud
+\[M_{\Phi}=70\msun(\frac{B}{\SI{10}{\micro\gauss}})(\frac{R}{\SI{1}{\parsec}})\]
+most dark clouds can be stabilized by internal magnetic field; dense core on the other hand have $M\approx M_{\Phi}\approx M_{BE}$. For $M/M_{BE}=1.1$, $M/M_{\Phi}=1.5$ the model have $\rho/\rho_c=10$ and eq-to-pol aspect ratio $1.6$is within range of those found from $NH_3$-map but theory predict more prolate configuration: flux distro $\TDy{\Phi_B}{M}$ is weakest point.
+
+While in dense core line width is nearly thermal so static magnetic field is plausible, in larger clouds linewidths indicates MHD-waves
+
+\subsection{MHD waves support}
+Par 9.5
+\begin{itemize}
+\item \keyword{MHD in solar wind, sunspots and flares}; \keyword{MHD waves generated by subsurface convection}; \keyword{Strong optical, UV, X-emission by T-Tauri}
+\item ir/optical polarization show B fields well ordered but significant local deviation: magnetostaticapprox needs refinements
+\item Internal MHD waves: impulsive disturbance of fluid element is transmitted to B and resisted by magnetic tension also causing disturbance to propagate 
+\item Generation of MHD waves: dense cores with stars have greater linewidth (Maddalena is an exception)
+\item Perturbation analysis, $\lambda\ll\lambda_J$, and long period such that isothermal perturbation. Mass continuity: \[-i\omega\delta\rho+i\rho_0\vec{k}\cdot\delta\vec{u}=0\]
+Momentum conservation: \[-i\omega\delta\vec{B}=i\vec{k}\wedge(\delta\vec{u}\wedge\vec{B}_0)\]
+$\vec{k}\cdot\delta\vec{B}=0$: disturbance perp to propagation
+\item Alfv\'en and sonic waves. Suppose $\vec{k}\parallel\vec{B_0}$: in transverse case $\vec{k}\perp\\delta\vec{u}$ prapagation ortogonal to velocity disturbance - $\delta\rho=0$ (true for transverse w. for any $\vec{k}$) - \[-\omega\delta\vec{B}=(\vec{k}\cdot\vec{B}_0)\delta\vec{u}-(\vec{k}\cdot\delta\vec{u})\vec{B}_0=-(\vec{k}\cdot\delta\vec{u})\vec{B}_0\]
+From momentum equation: $\delta u=-\frac{k\delta BB_0}{4\pi\omega\rho_0}$: eliminating $\delta u$ we have dispersion eq.:
+\[\frac{\omega^2}{k^2}=\frac{B_0^2}{4\pi\rho_0}\]
+for any plane wave $\omega/k$ gives phase velocity:
+\[V_A=\frac{B_0}{\sqrt{4\pi\rho_0}}=\SI{0.5}{\kilo\meter\per\second}(\frac{B_0}{\SI{10}{\micro\gauss}})(\frac{n_{H_2}}{\SI{e3}{\per\cubic\cm}})\expy{-1/2}\]
+Absence of sound speed show that restoring force is magnetic tension.
+Longitudinal waves have $\delta\vec{u}\parallel\vec{k}\parallel\vec{B}_0$ thus $\delta\vec{B}=0$ - only gas is affected - sound waves.
+\item Magnetosonic waves. $\vec{k}\perp\vec{B}_0$ - longitudinal waves: compression resisted by thermal and magnetic force; $\vec{k}\cdot\delta\vec{u}>0$.
+\begin{align*}
+&\frac{\omega^2}{k^2}=a_T^2+\frac{B_0^2}{4\pi\rho_0}\\
+&V_{max}=\sqrt{a_T^2+V_A^2}
+\end{align*}
+For $\theta_B$ angle between $\vec{k}$ and $\vec{B}_0$ transverse modes have $\omega^2=k^2V_A^2\cos^2{\theta_B}$ and restoring force is magnetic tension; the other 2 modes have $\delta\vec{u}$ in $\vec{B}_0-\vec{k}$-plane
+\[\frac{\omega}{k}=\frac{1}{2}\sqrt{V^2_{max}\pm\sqrt{V_{max}^4-4V_A^2a_T^2\cos^2{\theta_B}}}\]
+fast/slow magnetosonic waves.
+\item \keyword{MHD waves effective pressure} - Momentum equation
+\begin{align*}
+&\rho\PDy{t}{u_i}+\rho u_j\TDy{x_j}{u_i}=-a_T^2\PDy{x_i}{\rho}-\frac{1}{8\pi}\PDof{x_i}(B_iB_j)+\frac{1}{4\pi}B_j\PDy{x_j}{B_i}\\
+&\PDof{t}(\rho u_i)=-\PDy{x_j}{\Pi_{ij}}
+\end{align*}
+Pressure (momentum flux) tensor:
+\begin{align*}
+&\rho u_iu_j+a_T^2\rho\delta_{ij}+\frac{1}{8\pi}B_kB_k\delta_{ij}-\frac{1}{4\pi}B_iB_j\\
+&\frac{1}{2}\rho_0\delta u_i\delta u_j+\frac{1}{16\pi}\delta B_k\delta B_k\delta_{ij}-\frac{1}{8\pi}\delta B_i\delta B_j
+\end{align*}
+Force per unit volume due to waves: $F_i^{waves}=-\PDof{x_j}\Pi_{ij}^{waves}$; as in elestic membrane where stresses arise from  stretching and shearing deformation and $\frac{\delta u_i}{V_A}=-\frac{\delta B_i}{B_0}$ hence non diagonal terms cancel out:
+\begin{align*}
+&\vec{F}_{wave}=-\nabla P_{wave}\\
+&P_{wave}=\frac{1}{16\pi}|\delta\vec{B}|^2
+\end{align*}
+Alleviate severe flattening for cold magnetostatic clouds. Measured linewidth give Alfv\'enic internal velocities for larger clouds hence $|\delta B|\approx B_0$, given observation that $M\approx|W|$ hence $V_A\approx V_{vir}$: Alfv\'en waves exert a force comparable to selfgravity.
+\item Phase mixing: wave front in clumpy molecular cloud advance faster in some regions than others depending on local $V_A$; also reflection and modes conversion.
+\item MHD-turbulence - numerical simulation: random velocity perturbation in magnetized box - magnetosonic waves that steepen and dissipate through shock/ viscous heating. Energy decline for turbulent eddies of lenght L and velocity V $\approx\rho V^3/L$ - loose kinetic energy in turnover time $L/V$. Simulations find decay of impressed turbulence doesn't depends on magnetic field: real perturbation are not fully turbulent - more organized avoiding shocks/ external source pumping turbulence.
+\end{itemize}
+\end{document}

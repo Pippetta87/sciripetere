@@ -1,0 +1,168 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\section{Modello a Gas di Fermi del nucleo}
+\tool{
+\begin{enumerate}
+\item Conversione eV Kelvin\\
+\begin{align*}
+1  ^{\degree}K&= 8.621738*10^{-5}  eV \\
+&= 0.0862 meV \\
+&= 0.695 cm^{-1}
+\end{align*}
+\begin{gather*}
+     1 a.u=27.211396 eV=219474.63 cm^{-1}\\
+     1 Ry=13.6057 eV \\
+     1 eV =8065.54 cm^{-1} \\
+     1 eV= 11,600  ^{\degree}K\\
+   1 meV = 8.065 cm^{-1}\\
+\end{gather*}
+
+\item Particella confinata in una scatola di lato L\\
+Condizioni al bordo cubo lato L: $k_iL=n_i \pi $ quindi $k^2=\frac{\pi^2}{L^2}(n_x^2+n_y^2+n_z^2)$.
+Energia: $E=\frac{\hbar^2k^2}{2m}=\frac{\hbar^2\pi^2n^2}{2mL^2}$
+\end{enumerate}
+}
+
+Since the nuclear density is almost constant over the nuclear volume we may approxmate the nucleus as a Fermi free gas confined in a well of nuclear dimension.
+
+\subsection{Modello a gas di Fermi del  nucleo}
+\textbf{Modello a particelle indipendenti}\\
+N particelle identiche non interagenti: $H=\sum_i^N [ \frac{p_i^2}{2m}+V_{\inf}(r_i)]$.\\
+\textbf{Zero temperature approx}:\\
+The kinetic energy associated to localization in nuclear volume (few MeV) is large compared with room temperature ($\frac{1}{40} eV$).
+
+\subsection{Calcolo della densit\'a degli stati per un sistema di N fermioni identici in una scatola}
+Density of available state $\frac{dN}{4\pi p^2dp}$ is given by $dN=4*\frac{4\pi p^2\Omega}{h}dp$: we are allowed to place 4 particles in each orbital (spin-isospin).\\
+\textbf{Spazio delle Fasi}\\
+In un volume dello spazio delle fasi $(2\pi\hbar)^3$ ci stanno al pi\'u $\nu$ particelle dove $\nu$ \'e la degenerazione.\\
+\textbf{Density of states}\\
+Semi-Euristico (Numero di stati fratto volume dello spazio delgi impulsi)\\
+Number of states between $p$ e $p+dp$ is given by $dN=4*\frac{d^3p}{(2\pi\hbar)^3}\Omega=4*\frac{4\pi p^2dp}{(2\pi\hbar)^3}\Omega$.\\
+The infinitesimal thin spherical shell with radius $dp$ has the volume $4\pi p^2dp$.\\
+$g(k)=\frac{dN}{4\pi p^2dp}=\nu\frac{\Omega}{(2\pi)^3}$.\\
+
+\textbf{Stati particella in una scatola}\\
+Sia il numero di stati tra $n$ e $n+dn$: $dN=\nu \frac{4\pi n^2dn}{8}$, dove $\nu$ \'e il fattore di degenerazione. La densit\'a di stati fra $k$ e $k+dk$ \'e $g(k)=\frac{dN}{4\pi k^2dk}=\nu \frac{V}{(2\pi)^3}$.\\
+\ev{g(k)=\frac{dN}{4\pi k^2dk}=\nu \frac{V}{(2\pi)^3}}
+
+\subsection{Relazione tra densit\'a dei nucleoni e impulso di Fermi}
+$A=\int_0^{+\infty}g(k)n(k)4\pi k^2dk$, $n(k)$ \'e il numero medio di occupazione dei livelli di singola particella: per gas completamente degenere (T=0)    
+ $n(k)=\theta (k_F-k)$. Quindi: $A=\int_0^{k_F}g(k)4\pi k^2dk=\nu \frac{V}{(2\pi)^3}4\pi \frac{k_F^3}{3}$, e la densit\'a dei nucleoni \'e\\
+\ev{\rho =\frac{A}{V}=(\frac{3\pi^2\rho}{3})^{\frac{1}{3}}\nu \frac{k_F^3}{6\pi^2}}\\
+dato che $\rho=\frac{A}{V}=\frac{A}{\frac{4\pi}{3}r_0^3A}$ ottengo \ev{K_F=(\frac{9}{8}\pi)^{\frac{1}{3}}\frac{1}{r_0}} $(\nu=4)$.
+Sapendo che la densit\'a (centrale) $\rho=0,17 Nucleone/fm^3$ ricavo $K_F=(\frac{9}{8}\pi)^{\frac{1}{3}}(\frac{\frac{3}{\rho_0}}{4\pi})^{-\frac{1}{3}}=1,36 fm^{-1}$.
+
+\subsection{Relazione fra densit\'a ed energia di Fermi:}
+Energia di Fermi = energia dello stato occupato pi\'u alto: $\epsilon_F=\frac{\hbar^2k_F^2}{2m}\approx 38,35 MeV$ (Usando il $k_F$ della sezione di sopra).
+Sostituendo l'espressione per $k_F$ ho: \ev{\epsilon_F=\frac{\hbar^2}{2m}\rho^{\frac{2}{3}}(\frac{6\pi^2}{\nu})^{\frac{2}{3}}}. 
+
+\subsection{Energia cinetica per particella}
+Determino l'energia media per nucleone:
+$\epsilon_{Kin}=\frac{1}{2m_N}\frac{\int_0^{k_F}k^4dk}{\int_0^{k_F}k^2dk}=\frac{3}{5}\frac{p_F^2}{2m_N}$, o pi\'u direttamente \ev{\frac{E_{Kin}}{A}=\frac{3}{5}\epsilon_F \approx 24MeV}.\\
+$\frac{E}{A}=- \frac{B}{A}=-a_V+\text{Trascuto gli altri termini}\approx-15 MeV$ ed essendo l'energia cinetica per particella $(\frac{E}{A})_{Cin}=24 MeV$ derivo che il potenziale di singola particella \'e $(\frac{E}{A})_{Pot}=-39MeV$.
+
+\subsection{Relazione tra pressione e densit\'a}
+
+\tool{
+\begin{enumerate}
+\item Potenziali termodinamici\\
+$dF=-pdV-SdT$\\
+$dG=Vdp-SdT$\\
+$dU=-pdV+TdS$\\
+$dH=Vdp+TdS$\\
+
+\item Energia media per nucleone\\
+$\frac{E_{Kin}}{A}=\frac{3}{5}\epsilon_F$
+
+\item Pressione\\
+P esercitata da un gas=Flusso medio di momento attraverso una superficie ideale unitaria.
+$PV=\frac{1}{3}\int_0^{\infty}N(p)pv_pdp$ ($\exv{\vec{a} \cdot \hat{n}}=\frac{1}{3}a$)\\
+\ev{P=-(\frac{\partial U}{\partial V})=N\frac{2}{5}\epsilon_F=\frac{2}{3}\frac{U}{V}}\\
+Ricavo energia libera di Gibbs: $G=U+PV=N\epsilon_F$
+\end{enumerate}
+}
+
+In maniera pi\'u meccanica $P=-\left.\frac{\partial E}{\partial V} \right|_{S,A}=-\frac{\partial (\frac{E}{A})}{\partial (\frac{V}{A})}=-\frac{\partial \epsilon}{\partial \frac{1}{\rho}}=\rho^2 \frac{\partial \epsilon}{\partial \rho}=\frac{2}{5}\frac{\hbar^2}{2m}(\frac{6\pi^2}{\nu})^{\frac{2}{3}}\rho^\frac{5}{3}$.
+
+\subsection{(Calore specifico:Approssimazione)}
+$\delta N=(\frac{\partial N}{\partial \epsilon})_{\epsilon_F}$: la quantit\'a fra parentesi \'e la densit\'a di stati alla superficie di Fermi e $\delta \epsilon \approx kT$ (Distrinuzione FD: approssimazione per basse temperature dello "slittamento" in avanti dei numeri di occupazione rispetto T=0) quindi l'energia per portare un gas di Fermi a temperatura $kT$ \'e: $\delta U\approx \delta NkT=g(\epsilon_F)(kT)^2 \Rightarrow C_v=(\frac{\partial U}{\partial T})_V=2g(\epsilon_F)k^2T=3(kN)\frac{T}{T_F}=3R\frac{T}{T_F}$ (Il risultato corretto \'e $C_V=k\frac{\pi^2}{3}g(\epsilon_F)kT=\frac{\pi^2}{2}R\frac{T}{T_F}$). 
+The electronic degrees of freedom are largely "frozen out" at room temperature because it is not possible to excite the majority of electronics buried deep in the Fermi sea.
+
+\subsection{Relazione fra termine di volume della SEMF e il modello a gas di Fermi}
+
+This term arise from $\exv{T+V}$\\
+\begin{itemize}
+\item kinetic energy\\
+$T=A*\exv{T}=\frac{3}{5}\frac{{P_F}^2}{2m_N}A=\frac{3}{5}\frac{\hbar^2}{2m_N}(\frac{3\pi^2\rho}{2})^{\frac{2}{3}}A$
+\item Potential energy:\\
+Central potential $V_C(r)$ between nucleons (other potential energy contibutions associated with the spins will tend to yield an average central potential when one integrates over all directions).\\
+$V=\frac{1}{2}\sum_{ij}\int\rho(\vec{r_i})\rho(\vec{r_j})V_C(r_{ij})d^3r_id^3r_j\rightarrow$\\
+we consider the potential between two nucleons and multiply by number of couples (all nucleons are equivalent, the total wave function is antisymmetrized)\\
+$\rightarrow\frac{A(A-1)}{2}\int\rho(\vec{r_1})\rho(\vec{r_2})V_C(r_{12})d^3r_1d^3r_2$.\\
+Since nucleon's density is constant over nuclear volume  $\Omega$ we estimate $\rho(\vec{r_i})=\frac{\text{Probability}}{\text{unit volume(see normalization)}}\approx\frac{1}{\Omega}$, $V_C$ is short-ranged and nuclear medium is uniform  the integration over $d^3r_2$,  $\int\rho(\vec{r_2})V_C(r_{12})d^3r_2\approx\frac{1}{\Omega}\int V_C(\vec{r})d^3r=\frac{\overline{V_C}}{\Omega}$, is indipendent of the location of 1.\\
+ $V\approx\frac{A^2}{2\Omega}\overline{V_C}=\frac{1}{2}A\rho\overline{V_C} $ ($<0$ for attractive forces).\\
+\ev{a_V=-\frac{T+V}{A}\approx c_2\rho-c_1\rho^{\frac{2}{3}}}, con $c_1$ associated with kinetic energy and $c_2$ with potential energy (The nuclei don't collapse: we don't considere the repulsive core).
+\end{itemize}
+
+\subsection{Relazione fra termine di superficie (SEMF) e il modello a gas di Fermi}
+
+\begin{enumerate}
+\item Finite Fermi gas on kinetic energy\\
+The energy eigenfunction for cubic box $L^3$ (the shape change the result by a geometrical factor)  are $\psi=\sin{(k_xx)}\sin{(k_yy)}\sin{(k_zz)}$, but the state $k_i=0$ are not allowed; the number of states for $k_x=0$: $dN_x=4*\frac{L^2dk_ydk_z}{(2\pi)^2}=\frac{4S2\pi kdk}{6(2\pi)^2}=\frac{S}{3\pi}kdk$, con $S=6L^2$ superfice laterale del cubo.\\
+\textbf{Correzione volume volume finito}: $dN=(\frac{2\Omega}{\pi^2}k^2-\frac{S}{\pi}k)dk$.
+$A=\int_0^{k_F}(\frac{2\omega}{\pi^2}k^2-\frac{S}{\pi}k)dk=\frac{2\Omega}{3\pi^2}{k_F}^3-\frac{S}{2\pi}k_F^2=\frac{2\Omega}{3\pi^2}k_F^3(1-\frac{3\pi}{4}\frac{S}{\Omega}\frac{1}{k_F})$\\
+$\exv{T}=\frac{\hbar^2}{2m_N}\frac{\int_0^{k_F}(\frac{2\Omega}{\pi^2}-\frac{S}{\pi}k^3)dk}{A}\approx\frac{3}{5}\frac{\hbar^2k_F^2}{2m_N}[1+\frac{\pi}{8}\frac{S}{\Omega}\frac{1}{k_F}+\ldots]$\\
+Since for nuclei we have $\frac{S}{\Omega}\approx\frac{4\pi r_0^2A^{\frac{2}{3}}}{\frac{4\pi}{3}r_0^3A}\approx\frac{3}{r_0A^{\frac{1}{3}}}$: $\exv{T}=\frac{3}{5}E_F+\frac{9}{40}E_F\frac{\pi}{r_0k_F}\frac{1}{A^{\frac{1}{3}}}$.\\
+\ev{a_S(T)=\frac{9}{40}E_F\frac{\pi}{r_0k_F}\approx 18 MeV} (valid only to within a geometric factor like 2 or 3)\\
+
+\item Finite Fermi gas on potential energy\\
+The volume associated with the nuclear surface is a shell of thickness approximately equal to the range of the nuclear force: $\delta\Omega\approx4\pi R^2r_1$.\\
+Sottraggo la correzione all'energia potenziale $V\approx\frac{1}{2}A\rho\overline{V_C}(1-\frac{d\Omega}{\Omega})=\frac{1}{2}A\rho\overline{V_C}-\frac{3}{2}\rho\frac{r_1}{r_0}A^{\frac{2}{3}\overline{V_C}}$.\\
+$a_S(V)\approx\frac{3}{2}\rho\frac{r_1}{r_2}\overline{V_C}$ ($>0$ for attrattive force)\\
+\textbf{For a square well potential}:\\
+$V=\frac{1}{2}A\rho\overline{V_C}[1-\frac{9}{16}\frac{r_1}{R}+\frac{1}{32}(\frac{r_1}{R})^3]$.
+\end{enumerate}
+
+\subsection{Relazione fra termine Coulombiano della SEMF e il modello a gas di Fermi}
+\textbf{Charge density}: $\rho_e=\frac{Z}{A}\rho e=\frac{Ze}{\Omega}$\\
+\textbf{Coulomb energy}: $V_c=\frac{1}{2}\int\rho_e^2\frac{d^3r_1d^3r_2}{r_{12}}=\rho_e^2\int_0^R\frac{4\pi r^3}{3}\frac{4\pi r^2dr}{r}=\frac{4\pi}{3}\rho_e^24\pi\frac{R^5}{5}=\frac{3}{5}\frac{Z^2e^2}{R}=\frac{3}{5}\frac{Z^2e^2}{r_0}A^{-\frac{1}{3}}$ quindi:\\
+\ev{a_C=\frac{3}{5}\frac{e^2}{r_0}\approx 0.71 MeV}
+
+\subsection{Relazione fra termine di simmetria della SEMF e il modello a gas di Fermi}
+Calcolo del termine di simmetria della formula semiempirica di massa mediante il modello a gas di Fermi del nucleo.
+
+\tool{
+\begin{enumerate}
+\item Energia cinetica per nucleone\\
+$\frac{E_{Kin}}{A}=\frac{3}{5}\epsilon_F$
+\item Energia di Fermi\\
+$\epsilon_F=\frac{\hbar^2}{2m}\rho^{\frac{2}{3}}(\frac{6\pi^2}{\nu})^{\frac{2}{3}}$
+\item Total kinetic energy for $N=Z$\\
+$T_0=A\frac{3}{5}\frac{\hbar^2}{2m_N}(\frac{3\pi^2\rho_0}{2})^{\frac{2}{3}}$
+\item  Espansioni di Taylor al secondo ordine intorno a $x=\frac{1}{2}$ con $\delta x=x-\frac{1}{2}=\frac{Z-N}{A}$: \\
+\lbt{x^{\frac{5}{3}}=\frac{1}{2^{\frac{5}{3}}} +\frac{5}{3}\frac{1}{2^{\frac{2}{3}}}\delta x+\frac{10}{9}2^{\frac{1}{3}}\frac{{\delta x}^2}{2}+o({\delta x}^4)=(\frac{1+\beta}{2})^{\frac{5}{3}}}{(1-x)^{\frac{5}{3}}=\frac{1}{2^{\frac{5}{3}}} -\frac{5}{3}\frac{1}{2^{\frac{2}{3}}}\delta x+\frac{10}{9}2^{\frac{1}{3}}\frac{{\delta x}^2}{2}+o({\delta x}^4)=(\frac{1-\beta}{2})^{\frac{5}{3}}}
+\end{enumerate}
+}
+
+The nuclear force prefers $T = 0$, so nuclei with $Z = N$ are expected to have extra stability and so maximize the binding energy B. Let’s assume two Fermi gases consisting of Z protons and N neutrons. We will allow the relative number of protons and neutrons to vary but we will keep $A = Z + N$ fixed.
+\textbf{Densities of the two components}:\\
+$\rho_0=\frac{A}{V}$, $\rho_p=\frac{Z}{A}\rho_0\equiv x\rho_0$, $\rho_n=\frac{N}{A}\rho_0\equiv (1-x)\rho_0$, $A=Z+N$ costante.
+
+$E_{Cin}=\frac{3}{5}(N\epsilon_F^N+Z\epsilon_F^P)=\frac{3}{5}\frac{\hbar^2}{2M}\frac{(3\pi)^\frac{2}{3}}{2}(N^{\frac{5}{3}}+Z^{\frac{5}{3}})=T_P+T_N=2^\frac{2}{3}T_0[x^\frac{5}{3}+(1-x)^\frac{5}{3}]$, che espando intorno a $x=\frac{1}{2}$, il pongo $\delta x=x-\frac{1}{2}=\frac{Z-N}{A}$ e ottengo l'approssimazione  \ev{T_P+T_N=T_0+\frac{5}{9}T_0(\frac{Z-N}{A})^2=T_0+a_{Sym}\frac{(N-Z)^2}{A}}.
+
+quindi $(\frac{E}{N})_{Sym}=\frac{5}{9}(\frac{E}{N})=a_{Sym}\approx 12.8 MeV$. Ricavo il contributo del potenziale nucleare a $a_{Sym}$:
+$(\frac{E_{Sym}}{N})_{Int}=a_{Sym}-(\frac{E}{N})_{Sym}\approx16 MeV$, sapendo che $a_{Sym}\approx20-30 Mev$.
+
+\subsection{Mean Free Path of Nucleons}
+
+\begin{comment}
+Mean Free Path of Nucleons
+A fundamental characteristic of any many-body system is the mean free path for collisions between constituent particles. A wide variety of evidence testifies to the fact that, in the nucleus, this mean free path is large compared to the distance between the nucleons and even, under many circumstances, is larger than the dimensions of the nucleus.
+A very direct way to explore the nuclear opacity is provided by scattering experiments involving incident neutrons and protons. 
+%Figure 2-3, p. 165 shows typical examples of the energy dependence of the total cross section for inter- action of neutrons with nuclei.
+ For a system with a mean free path small com- pared to the radius, the total cross section would vary monotonically with energy, decreasing slowly over the eneirgy region considered, toward the limiting value 2nR ’. (For a discussion of general scattering theory as applied to nuclei, and for the estimate of cross sections for totally absorbing systems, see, for example, Blatt and Weisskopf, 1952, Chapter 8.) The pronounced variations in the observed cross sections must be attributed to the interference between the incident and transmitted waves, and thus establish the fact that the mean free path is at least comparable with the nuclear radius. (We later return to the more quantitative analysis of such scattering experiments (Sec. 2-4c); see also the discussion in connection with Fig. 2-3.)
+The relatively long mean free path of the nucleons implies that the inter- actions primarily contribute a smoothly varying average potential in which the particles move independently. As a first approximation of heavy nuclei, we may neglect surface effects, and the resulting Fermi gas model provides a useful starting point for the discussion of many of the bulk properties of nuclei.
+\end{comment}
+\end{document}

@@ -1,0 +1,59 @@
+\ProvidesPackage{titleT-ref}
+
+\usepackage{titletoc}
+%\setcounter{tocdepth}{1}
+\usepackage[compact,toctitles]{titlesec}
+
+\newcommand{\PartialToc}{
+\ifnum\csubtoc=1
+\ifnum\value{chapter}=1 {\startcontents[chapters]\maxtocdepth{subsection}}
+\else 
+{\stopcontents[chapters]\startcontents[chapters]\maxtocdepth{subsection}} 
+\fi
+\ifnum\value{chapter}=\totvalue{chapter} {\startcontents[chapters]\maxtocdepth{subsection}
+ }\fi
+\fi
+
+\vspace*{1pc}\hrule\vspace*{0.5pc}% toc at beginning chapter
+%\startcontents[chapters]
+\vbox{\Large \hypertarget{outline\thechapter}{\noindent Outline Cap. \thechapter}}
+\maxtocdepth{subsection}
+\printcontents[chapters]{}{1}{\small}\vspace*{0.5pc}\hrule
+%\lfoot{\begingroup
+%\hypersetup{allcolors=blue}
+%Toc.\hyperlink{outline\thepart}{\thepart}.\hyperlink{outline\thechapter}{\thechapter} %Pg: \thepage (\thepart)ch.\thechapter-Sec.
+%\thesection,\hyperlink{toc}{Main Toc}\endgroup
+%}
+}
+%\newcommand{\PartialToc}{\vspace*{2pc}\hrule\vspace*{1pc}% add partial toc (in each chapter)
+%\startcontents[chapters]\vbox{\bf\Large Outline}
+%\printcontents[chapters]{l}{1}{\setcounter{tocdepth}{3}}\vspace*{1pc}\hrule}
+
+
+\titleclass{\part}{top}
+
+\titleformat{\part}[block]{\huge\bfseries\centering}{\thepart}{10pt}{\huge}[
+%\vspace*{\fill}
+\thispagestyle{mystyle} \addtocounter{partworkouts}{1}
+]
+
+\titleformat{\chapter}[block]
+{\huge}{\chaptertitlename\ \thechapter:\ }{0pt}{\huge}[\PartialToc
+%\ifnum\csubtoc=1 \ifnum\the\value{chapter}=1 \startcontents[chapters]\else \stopcontents[chapters]\startcontents[chapters] \fi \fi
+\addtocounter{cherrychapter}{1}
+\thispagestyle{mystyle}
+]%\headinginfo{\currentname}
+
+\titleformat{\section}{\LARGE}{}{0pt}{\LARGE}[
+\headinginfo{\currentname}
+]
+
+\titleformat{\subsection}[display]{\large}{}{0pt}{\large\scshape}[
+\centering\headinginfo{\currentname}
+]
+
+\titlespacing*{\part}{0pt}{0pt}{0pt}
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}

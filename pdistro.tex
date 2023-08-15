@@ -1,0 +1,28 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{pdf}
+%\PartialToc
+
+\section{MUST KOWN probability density function}
+
+\subsection{Poissonian}
+
+\begin{itemize}
+\item binomial
+\[b(x;n,p)=\frac{n!}{(n-x)!x!}p^x(1-p)^{n-x}\]
+where $n\to\infty$ and $\mu=np$ constant
+
+\item conteggi in intervallo condizione bassa $p=c\Delta t=\frac{\lambda T}{n}$ occurrence in one intervl are indipendent from previous interval: probability of x arrival in interval $(0,t+\Delta t]$
+\begin{align*}
+&f(x,t+\Delta t)=f(x,t)f(0,\Delta t)+f(x-1,t)f(1,\Delta t)\\
+&=f(x,t)(1-a\Delta t)+f(x-1,t)a\Delta t\\
+&\TDy{t}{f}=\lim_{\Delta t\to0}\frac{f(x,t+\Delta t)-f(x,t)}{\Delta t}\\
+&=a[f(x-1,t)-f(x,t)]
+\end{align*}
+sopra \'e soddisfatta da
+\[f(x,t)=\frac{(at)^x\exp{-at}}{x!}\]
+\end{itemize}
+
+\end{document}

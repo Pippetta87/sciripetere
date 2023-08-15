@@ -1,0 +1,817 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\part{Fusione}
+
+\chapter{Fenomenologia della fusione}
+
+\subsection{Coulomb barrier}
+\begin{align*}
+&V=\frac{e^2Z_aZ_X}{R}=1.44\frac{Z_aZ_X}{R(fm)}\\
+&B_{aX}=V_{aX}(r=R_a+R_X)=\alpha_{SF}\hbar c\frac{Z_aZ_X}{R_a+R_X}
+\end{align*}
+
+\begin{align*}
+B_{PP}\approx 0.9 MeV\\
+B_{DT}\approx 0.4 MeV
+\end{align*}
+
+
+
+\section{Fusion between 2 Ne nuclei.}
+
+\subsection{Heavy Ion Collider.}
+
+Accelerating $^{20}Ne$ to $21.2 MeV$ against $^{20}Ne$ target.
+
+\subsection{Thermal energy to overcome Coulomb B.}
+For $^{20}Ne$ $\frac{1}{2}*21.2 MeV=\frac{3}{2}KT$ quindi $T=10^{11}K$.
+
+\section{Alcune reazioni di fusione}
+
+\subsection{DD fusion}
+\begin{align*}
+^2H+^2H\to^4He+\Pphoton\quad(Q=23.8\,MeV)&\intertext{dato che $Q>S_{\Pproton},\,S_{\Pneutron}$ i seguenti processi son pi\'u probabili}\\
+^2H+^2H\to^3He+\Pneutron\quad(Q=3.3\,MeV)\\
+^2H+^2H\to^3He+\Pproton\quad(Q=4.0\,MeV)
+\end{align*}
+
+\section{Energetica della fusione.}
+
+\subsection{Q di fusione: energy release.}
+
+\begin{equation*}
+Q=[(m_a+m_X)-(m_b+m_Y)]c^2
+\end{equation*}
+
+\subsection{Distribuzione energia cinetica dei prodotti di fusione.}
+
+For most applications of fusion I can neglect the initial motion of reagents
+
+\begin{align*}
+&\frac{1}{2}m_bv_b^2+\frac{1}{2}m_Yv_Y^2=Q & \intertext{Energy eq}\\
+&m_bv_b=m_Yv_Y & \intertext{Conservazione del momento}
+\end{align*}
+
+e ricavo
+
+\begin{equation*}
+\frac{T_b}{T_Y}=\frac{m_Y}{m_b}
+\end{equation*}
+
+\subsection{Binding energy.}
+ Dal grafico della BE/A in funzione di A vedo che la fusione \'e esoenergetica ($Q>0$) fino ad $A=56$ (produco elementi pi\'u legati fino al $^{56}Fe$).
+
+
+\section{Esempi di Fusion Reaction.}
+
+\subsection{DD reactions.}
+$B_{DD}=360KeV$
+
+\begin{align*}
+^2H+^2H\to ^4He+\gamma (Q=23.8Mev)\\
+^2H+^2H\to ^3He+n (Q=3.3 MeV)\\
+^2H+^2H\to ^3H+p (Q=4.0 MeV) \intertext{Lighter products have $75\%$ of Q}
+\end{align*}
+
+\subsection{DT reactions}
+
+\begin{align*}
+^2H+^3H\to ^4He+n (Q=17.6 Mev)& \intertext{Neutron monoenergetic ($80\%$ of Q)}\\
+T_n=\frac{Q}{1+\frac{m_n}{m_{He}}}\approx14.1 MeV &
+\end{align*}
+
+
+\chapter{Reaction Rate di fusione.}
+
+\section{Sezione d'urto di fusione.}
+
+\subsection{Sezione d'urto di Rutherford}
+
+\begin{align*}
+\frac{d\sigma}{d\Omega} &=\frac{\text{Events into solid angle $d\Omega$ at $(\theta,\phi)$/(unit time)}}{d\Omega*(\text{Incident particles})*(\text{Target nuclei}/cm^2)}\\
+\frac{d\sigma}{d\Omega} &=(\frac{\alpha}{2m{v_{\infty}}^2})^2\frac{1}{\sin^4{\frac{\theta}{2}}}\\
+\frac{d\sigma}{d\Omega} &=(\frac{(ze)(Ze)}{4k})^2(\frac{1}{4\pi\epsilon_0})^2\frac{1}{\sin^4{\frac{\theta}{2}}}
+\end{align*}
+
+per un sistema di riferimento in cui il centro di massa delle particelle \'e a riposo.
+
+\subsection{Sezione d'urto non risonante}
+Particelle interagenti ad energie "termiche" \'e probabile che non siano in zone di risonanza per la sezione d'urto di fusione.
+
+La sezione d'urto \'e proporzionale a:
+\begin{enumerate}
+\item Fattore $k^{-2}$
+\item Partial reaction probability.
+Per particelle cariche include un fattore che tiene conto della probabilit\'a di attraversamento della barriera di potenziale 
+\begin{align*}
+\exp{-2G}=\exp{-\frac{2\pi Z_aZ_Xe^2}{\hbar v}}
+\end{align*}
+\end{enumerate}
+
+cio\'e la relazione $\sigma_{Fus}\propto\frac{1}{v^2}\exp{-2G}$ include tutta la dipendenza energetica.
+
+Il fattore di proporzionalit\'a coinvolge elementi di matrice nucleare e fattori statistici dipendenti dagli spin.
+
+$\sigma_{FUS}=\sigma(aX\to bY)*P$:
+
+P \'e la probabilit\'a di attraversamento della barriera Coulombiana.
+
+$\sigma(aX\to bY)$ dipende da elementi di matrice nucleare e fattori statistici relativi agli spin delle particelle.
+
+Per includere la debole dipendenza da E per fusione non risonante scrivo:
+
+$\sigma_{FUS}=\frac{S(E)}{E}\exp{-2G}$:
+
+$S(E)$ \'e chiamato fattore astrofisico.
+
+La dipendenza $\propto\frac{1}{E}$ \'e un fattore geometrico.
+
+\subsection{Probabilit\'a attraversamento barriera Coulombiana}
+La probabilit\'a di attraversare una barriera infinitesima $[r,r+\,dr]$ 
+\begin{align*}
+dP=\exp{-2\,dr\sqrt{\frac{2m}{\hbar^2}}\sqrt{V(r)-E}}&\intertext{che per barriera finita}\\
+P=\exp{-2G}
+\end{align*}
+
+Energia di Gamow: $E_G$.
+
+\begin{align*}
+P\propto\exp{-\sqrt{\frac{E_G}{E}}}&\intertext{Definita l'energia}\\
+E_G=2mc^2(\pi \alpha_{SF}Z_aZ_X)^2
+\end{align*}
+
+\subsection{"Gamow Factor": alpha decay vs fusion}
+
+Avendo in mente la probabilit\'a di attraversamento di una barriera Coulombiana calcolata nella teoria del alpha decay.
+
+\begin{align*}
+G=\sqrt{\frac{2m}{\hbar^2}}\int_a^b\sqrt{V(r)-E}\,dr & \intertext{con $x=\frac{Q}{B}$}\\
+&\intertext{nel caso della fusione sostutuisco Q con E=center of mass energy of reacting particles}
+E\approx KeV\ll B&\intertext{approssimo}\\
+G\approx\frac{e^2}{4\pi\epsilon_0}\frac{\pi Z_aZ_X}{\hbar v}=\pi\alpha_{SF}\frac{Z_AZ_X}{v/c}
+\end{align*}
+
+Riscrivo G: per praticit\'a raggruppo le costanti del fattore di Gamow in $\beta$.
+
+\begin{equation*}
+G=\beta\frac{1}{\sqrt{E}}=\frac{\pi}{2}\alpha_{SF}\sqrt{2mc^2}Z_aZ_X\frac{1}{\sqrt{E}}=\pi\alpha_{SF}\frac{Z_AZ_X}{v/c}
+\end{equation*}
+
+\section{Picco di Gamow}
+
+\subsection{Distro di MB}
+\begin{align*}
+F_{MB}(v)=4\pi v^2(\frac{m}{2\pi k_B T})^{\frac{3}{2}}\exp{-\frac{mv^2}{2K_BT}}
+\end{align*}
+
+\subsection{Reaction Rate: costante di decadimento}
+\begin{equation*}
+R(aX\to bY)=\frac{\# \text{reazioni}}{\text{Tempo}*\text{Volume}}=\sigma(aX\to bY)n_X\Phi_a
+\end{equation*}
+
+definito il flusso delle particelle a 
+\begin{equation*}
+\Phi_a=\frac{N_a}{\text{Superficie}*\text{Tempo}}=\frac{n_aV}{S*T}=n_av
+\end{equation*}
+quind
+\begin{align*}
+R&=n_an_X\exv{\sigma(v_{\text{rel}}) v_{\text{rel}}}\\
+&=n_an_X\lambda&\intertext{definito il reaction rate per coppia di particelle ($n_a=1/cm^3$)}\\
+\lambda=\exv{\sigma_Fv}\\
+R=\frac{1}{2}n_X^2\exv{\sigma v}& \intertext{per particelle identiche.}
+\end{align*}
+
+La densit\'a di potenza prodotta in una reazione binaria, detto $W_{aX}$ l'energia liberata in una singola reazione, \'e
+\begin{equation*}
+P_{aX}=n_an_X\exv{\sigma v}W_{aX}
+\end{equation*}
+
+\subsection{Massimo di $F_{MB}\sigma v$}
+
+\begin{align*}
+\exv{\sigma v}\propto\intzi\frac{1}{v}\exp{-2G}\exp{-\frac{mv^2}{2kT}}v^2\,dv\\
+\exv{\sigma v}\propto\intzi\exp{-2G}\exp{-\frac{E}{kT}}\,dE
+\end{align*}
+
+\begin{align*}
+\exv{\sigma_Fv}&=\intzi\sigma_FvF^{MB}(v)\,dv\\
+&=\sqrt{\frac{8}{\pi m}}(K_BT)^{-\frac{3}{2}}\intzi S(E)\exp{-\frac{E}{KT}-\frac{\beta}{\sqrt{E}}}\\
+&\approx\sqrt{\frac{8}{\pi m}}(K_BT)^{-\frac{3}{2}}S_0\intzi \exp{-\frac{E}{KT}-\frac{\beta}{\sqrt{E}}}&\intertext{tutta ci\'o che non sappiamo sono i fattori astrofisici estrapolati a basse energia.}
+\end{align*}
+\index{Fattore astrofisico: energia zero.}
+
+L'integrando \'e fortemente piccato quindi le particelle che danno maggiormente luogo a fusione (a parit\'a di condizioni) son quelle con picco pi\'u alto
+\begin{equation*}
+\frac{d}{dE}(\frac{E}{KT}+bE^{-\frac{1}{2}})_{E=E_0}=\frac{1}{KT}-\frac{1}{2}b(\frac{1}{E_0})^{\frac{3}{2}}
+\end{equation*}
+ovvero
+
+\begin{align*}
+&E_0=(\frac{bKT}{2})^{\frac{2}{3}}&\intertext{con}\\
+A=\frac{A_1A_2}{A_1+A_2}=\frac{m}{m(u)}\\
+&E_0=1.22(Z_a^2Z_X^2AT_6^2)^{\frac{1}{3}} (keV)&\intertext{Most effective energy for thermonuclear reactions}
+\end{align*}
+
+\index{Energia del picco di Gamow}
+
+\subsection{Variazione di concentrazione dei reagenti}
+
+\begin{align*}
+&R=n_an_X\exv{\sigma v}&\intertext{Reaction rate medio}\\
+&\lambda_a(X)=\frac{1}{\tau_a(X)}=\frac{\text{Probabilit\'a di fusione a-X}}{\text{Tempo}*\text{Nucleo X}}
+\end{align*}
+
+quindi
+\begin{align*}
+\frac{\partial n_X(t)}{\partial t}|_a&=-\lambda_a(X)n_X(t)=-\frac{n_X(t)}{\tau_a(X)}\\
+&=-R_{aX}=-n_an_X\exv{\sigma_{aX}v}&\intertext{la vita media per la reazione $a+X$ \'e}\\
+\tau_a(X)=\frac{1}{n_a\exv{\sigma_{aX}v}}
+\end{align*}
+
+\section{Risonanze nella fusione}
+
+\subsection{Low energy capture reaction: compound nucleus}
+
+La sezione d'urto di fusione di alcune reazioni ha dei picchi di risonanza:
+\begin{equation*}
+^1H+^{12}C\to^{13}N+\gamma\quad E\approx0.5 MeV
+\end{equation*}
+
+\begin{equation*}
+\sigma_{ris}=\frac{\pi}{k^2}\frac{2J+1}{(2J_a+1)(2J_X+1)}\frac{\Gamma_{aX}\Gamma_{bY}}{(E-E_R)^2+\frac{\Gamma^2}{4}}
+\end{equation*}
+
+\part{Meccanismo di fusione nel stelle}
+  
+\chapter{Reazioni di base}
+
+\section{PP cycle}
+
+Nell'interno stellare l'idrogeno \'e ionizzato quindi nel caso di emissione di positroni nel Q-valore \'e compreso un contributo per l'annichilamento \Pelectron\APelectron.
+
+\subsection{Bottle-neck}
+
+\begin{align*}
+&^1H+^1H\to^2H+\APelectron+\Pnue (Q=1.44 MeV)&\intertext{Il neutrino ha spettro continuo con endpoint}\\
+&E(\nu)=0.42 MeV
+\end{align*}
+
+Reazione lenta:
+
+\begin{align*}
+&\sigma\approx 10^{-33}b (KeV)\\
+&\approx 10^{-23} b (MeV)\\
+&R=\frac{1}{2}n_P^2\exv{\sigma v}\approx5*10^{-18} \text{reazioni}/\text{P}/s\\
+&\rhosunc=125gr/cm^3 \quad (7.5*10^{25}P/cm^3)\\
+&\tsunc 15*10^6K\Rightarrow\exv{T_P}\approx1 KeV&
+\intertext{per le regioni centrali del sole.}
+\end{align*}
+
+\subsection{Deuteron cooking up to Helium}
+
+Il deutone viene trasformato rapidamente in isotopo di elio
+\begin{equation*}
+^2H+^1H\to ^3He+\gamma \quad (Q=5.49 MeV)
+\end{equation*}
+
+\subsection{Produzione di He4: ciclo PP1 (Sun:$69\%$).}
+\begin{equation*}
+^3He+^3He\to^4He+2^1H+\gamma\quad(Q=12.86 MeV)
+\end{equation*}
+
+\subsection{Bilancio energetico PP}
+L'energia dei neutrini che escono dal core non scalda la fotosfera.
+\begin{align*}
+Q=26.7 MeV &\intertext{Atomi neutri e annichilamento \Pelectron\APelectron.}
+\end{align*}
+
+\subsection{Tempi medi di reazione nella catena PP.}
+Per le condizioni presenti nel sole:
+
+\begin{tabular}{c|c|}
+\hline
+Reazione & $t_r$ \\
+\hline
+$^1H+^1H\to^2H+\APelectron+\Pnue$ & $7*10^9\,yr$\\
+$^2H+^1H\to ^3He+\gamma$ & $4 s$\\
+$^3He+^3He\to^4He+2^1H$ & $4*10^5\,yr$\\
+$^{12}C+^1H\to ^{13}N+\gamma$ & $10^6\, yr$\\
+$^{13}N\to^{13}C+\APelectron+\Pnue$ & $10\,min$\\
+$^{13}C+^1H\to ^{14}N+\gamma$ & $2*10^5\, yr$\\
+$^{14}N+^1H\to ^{15}O+\gamma$ & $<3*10^7\, yr$\\
+$^{15}O\to^{15}N+\APelectron+\Pnue$ & $2\,min$\\
+$^{15}N+^1H\to ^{12}C+^4He$ & $10^4\, yr$\\
+\hline
+\end{tabular}
+
+\section{Altre diramazioni della catena \Pproton\Pproton dopo produzione He3.}
+
+\subsection{Ciclo HeP (Sun: $0.0001\%$).}
+\begin{align*}
+^3He+^1H\to^4He+\APelectron+\Pnue \quad (Q=19.28 MeV)\\
+E_{\nu}^{max}=Q-m_ec^2=18.77 MeV
+\end{align*}
+
+\subsection{Produzione Be7 (Sun: $31\%$).}
+\begin{equation*}
+^3He+^4He\to^7_4Be+\gamma
+\end{equation*}
+da cui seguono 2 diramazioni:
+
+\subsection{Ciclo PP2 (Sun: $99.7\%$).}
+\begin{align*}
+^7_4Be+\Pelectron\to^7_3Li+\Pnue&\intertext{CE: decadimento a 2 corpi: neutrino monoenergetico}\\
+E(\nu)\approx0.862 MeV\\
+^7_3Li+^1H\to2^4He
+\end{align*}
+
+\subsection{Ciclo PP3 (Sun: $0.3\%$).}
+\begin{align*}
+^7_4Be+^1H\to^8_5B+\gamma\\
+^8_5B\to^8_4Be+\APelectron+\Pnue&\intertext{Spettro energetico del neutrino continuo con endpoint}\\
+E(\nu)=14 MeV\\
+^8_4Be\to2^4He
+\end{align*}
+
+\subsection{Energia irradiata in neutrini}
+\begin{align*}
+Q_{eff}&=Q-\exv{E_{\nu}}(MeV)\quad&\text{Perdita in neutrini}&\intertext{PP1}\\
+&=26.2 &2\%&\intertext{PP2}\\
+&=25.66  & 4\%&\intertext{PP3}\\
+&=19.17  & 28\%
+\end{align*}
+
+
+\section{Ciclo CNO}
+Procede con maggiore velocit\'a perch\'e non \'e presente il bottleneck $H+H\to D$ ma la barriera coulombiana per la fusione dei nuclei \'e 6-7 volte pi\'u elevata: efficiente ad alte temperature.
+
+
+\begin{align*}
+^{12}_6C+^1H\to^{13}_7N+\gamma\\
+^{13}N\to ^{13}_6C+\APelectron+\Pnu\\
+^{13}C+^1H\to ^{14}_7N+\gamma\\
+^{14}_7N+^1H\to ^{15}_8O+\gamma\\
+^{15}_8O\to ^{15}_7N+\APelectron+\gamma\\
+^{15}_7N+^1H\to ^{12}_6C+^4_2He
+\end{align*}
+
+Processo efficace:
+
+$4^1H\to ^4He+2\APelectron+2\Pnue$ uguale alla catena PP, stesso Q-valore.
+
+\clearpage
+
+\chapter{Evoluzione stellare}
+
+\section{Modello standard del sole}
+
+\subsection{Il sole.}
+
+\begin{align*}
+&\msun=2*10^{33}gr\\
+&\text{Age}=4.55*10^9\,yr\\
+&\rsun=7*10^5 Km\\
+&\tsunc=1.57*10^7 K\\
+&\tsuns=6*10^3 K\\
+&\rhosunc=130gr/cm^3\\
+&\lsun=3.8*10^{26}W=3.8*10^{33}erg/s\\
+&\Phi_{\nu}(\Pproton\Pproton)=6.0*10^{10}cm^{-2}s^{-1}\\
+&\Phi_{\nu}(^8B\to^8Be^*+\APelectron+\Pnue)=6.0*10^6cm^{-2}s^{-1}\\
+&X=74\%,\,Y=23,\,Z=3&\intertext{$\uparrow$ Attuale}\\
+&X=75\%,\,Y=22,\,Z=3&\intertext{$\uparrow$ Composizione iniziale}\\
+\end{align*}
+
+\subsection{Equilibrio idrostatico.}
+\begin{align*}
+dS\,(P(r)-P(r+\,dr)-F_g(r))=0\\
+F_g(r)=G\frac{m(r)\rho(r)\,dV}{r^2}&\intertext{se ho simmetria sferica}\\
+\frac{dm}{dr}=4\pi\rho(r)r^2
+\end{align*}
+
+Posso trascurare la BE gravitazionale?
+\begin{align*}
+B_{\odot}=N_Pm_p-\msun=-E_G=\frac{3}{5G\frac{\msun^2}{\rsun}}\approx10^{-6}\msun c^2
+\end{align*}
+
+\subsection{Equazione di stato.}
+
+\begin{align*}
+&P=P(\rho,T,X,Y,Z)=P_{Gas}+P_{Rad}&\intertext{Gas ideale}\\
+&P_{Gas}=K\rho T\\
+&P_{Rad}=\frac{1}{3}aT^4
+\end{align*}
+
+\subsection{Produzione di energia}
+\begin{align*}
+\epsilon=\frac{\text{Energia prodotta}}{\text{Massa}*\text{Tempo}}&\intertext{L'energia prodotta per fusione}\\
+\epsilon=\epsilon_F(\exv{\sigma v},\rho,T,X,Y,Z)&\intertext{\'e legata alla luminosita tramite}\\
+\frac{d\lu}{dr}=\epsilon_F(r)4\pi r^2
+\end{align*}
+
+\subsection{Reaction Rate}
+La radiazione che raggiunge la terra ha un flusso di $1.4*10^3 W/m^2$ quindi la potenza irraggiata \'e $4*10^{26} W$: dato che ogni reazione di fusione libera 25 MeV sono necessarie $10^{38} \text{Fusioni}/sec$ (4 $^1H$ per fusione).
+
+\begin{equation*}
+N_{Reaz}=\frac{\exv{R_{PP}}}{n_P}N_p(core)
+\end{equation*}
+
+\subsection{Flusso neutrini}
+\begin{equation*}
+\Phi_{\nu}=\frac{\dot{N_{\nu}}}{4\pi d^2}=7*10^{10}\frac{\Pnu}{s*cm^2}
+\end{equation*}
+
+\section{Fasi finali dell'evoluzione stellare.}
+
+\subsection{Teorema del viriale}
+Relazione tra l'energia cinetica media e l'energia potenziale di un sistema in equlibrio stabile o quasi-stabile.
+
+\begin{align*}
+&G=\sum_i\scap{p_i}{r_i}=\frac{1}{2}(\sum_im_ir_i^2)^2=\frac{1}{2}\frac{dI}{dt}&\intertext{I momento d'inerzia}\\
+&\frac{dG}{dt}=\sum_i\scap{\dot{r_i}}{p_i}+\sum_i\scap{r_i}{\dot{p_i}}=2T+\sum_i\scap{r_i}{f_i}&\intertext{l'ultimo termi del membro di destra \'e il  viriale di Clausius}\\
+&\intertext{Assumendo che la forza tra le particelle segua una legge di potenza della distanza con esponente n(del potenziale) e sia derivabile da un potenziale}\\
+&\frac{dG}{dt}=2T-n\mathcal{U}&\intertext{dove U \'e l'energia potenziale totale del sistema}\\
+&\frac{dG}{dt}=\frac{1}{2}\frac{d^2I}{dt^2}=2T+\Omega&\intertext{per il potenziale gravitazionale n=-1}\\
+&2\overline{T}+\overline{\Omega}=0&\intertext{se il sistema \'e periodico la media del lato sinistro su un periodo dell'equazione sopra \'e nullo}
+\end{align*}
+
+\subsection{Fasi di contrazioni ed espansioni successive.}
+
+Terminato l'idrogeno il core di elio si contrae non essendoci pi\'u fonti di energia fino a che si raggiungono T sufficienti per la fusione di dell'elio.
+
+Detti m massa del core e r suo raggio
+\begin{align*}
+E_G=-G\frac{m^2}{r}&\intertext{quindi in fase di contrazione}\\
+\Delta E_G=\frac{Gm}{r^2}\Delta r<0&\intertext{da cui risulta aumento di energia cinetica}\\
+\Delta E=-\frac{1}{2}\Delta U_G>0
+\end{align*}
+
+\subsection{fase di fusione dell'elio ($T\approx10^8K$).}
+
+Fusione di elio-4 in carbonio-12
+\begin{align*}
+^4He+^4He\to ^8_4Be\quad(\tau\approx10^{-16}s)\\
+^8Be+^4He\to^{12}C+\gamma&\intertext{al crescere di T}\\
+^{12}C+^4He\to ^{16}O+\gamma\\
+^{16}O+^4He\to^{20}Ne+\gamma
+\end{align*}
+
+\subsection{Fase di fusione del carbonio-12.}
+\begin{align*}
+^{12}C+^{12}C&\to ^{16}O+2^4He\\
+&\to ^{20}Ne+^4He\\
+&\to ^{23}Na+\Pproton\\
+&\to^{24}Mg+\gamma
+\end{align*}
+
+\subsection{Fase fusione Ossigeno.}
+\begin{align*}
+^{16}O+^{16}O&\to ^{28}_{14}Si+^4He\\
+&\to^{31}_{15}P+\Pproton\\
+&\to ^{32}S+\gamma
+\end{align*}
+
+e cos\'i via fino al $^{56}Fe$ per le stelle pi\'u massicce.
+
+\subsection{Destino finale della stella}
+
+\begin{itemize}
+\item $M<8\msun$: Nane bianche ($R\approx R_T$).
+La pressione di degenerazione degli elettroni blocca il collasso.
+\item $8\msun<M<25\msun$: stella di neutroni.
+La nucleosintesi raggiunge il $^{56}Fe$  poi hanno luogo fenomeni di cattura elettronica (neutronizzazione della materia): sintesi elementi pi\'u pesan
+\item $M>25\msun$: buco nero.
+\end{itemize}
+
+
+\section{Nane bianche}
+
+\subsection{Grandezze caratteristiche}
+
+\begin{itemize}
+\item $M\approx\msun$
+\item $\rho_c\approx10^6gr/cm^3\approx10^4\rhosunc$.
+\begin{align*}
+n_e=\exv{Z}n_I\\
+\rho&=\exv{m_I}n_I+m_en_e\\
+&\approx\exv{M_{atom}}n_I=\exv{A}m_Hn_I
+\end{align*}
+
+\item Raggio di Schwarzschild.
+
+\begin{equation*}
+\frac{R_G}{R}\approx100(\frac{R_G}{R})_{\odot}\approx4*10^{-6}
+\end{equation*}
+ho definito il raggio di Schwarzchild come $R_G=\frac{2GM}{c^2}$.
+\item Velocit\'a di fuga.
+
+\begin{equation*}
+v_f=\sqrt{\frac{2GM}{R}}\approx0.02 c
+\end{equation*}
+
+\item Pressione.
+
+\begin{equation*}
+P=P_I+P_{el}\approx P_{el}
+\end{equation*}
+\end{itemize}
+
+\subsection{How far inward before degeneracy set in?}
+Condizione necsuff perch\'e si abbia degenerazione \'e
+\begin{align*}
+\frac{4\pi^2}{(\theta mc^2)^2}\frac{x\sqrt{x^2+1}}{f(x)}\gg1&\intertext{ho definito}\\
+x=\frac{h}{mc}(\frac{3n}{8\pi})^{\frac{1}{3}}\quad \theta=\frac{1}{KT}
+\end{align*}
+Per gli strati esterni vale $P\propto\rho T$ ($\approx0.23 \%$ della massa) 
+
+
+\subsection{Equazione di stato gas perfetto}
+
+\begin{align*}
+n=\frac{N}{V}\\
+\rho=\frac{M}{V}\\
+m_0=\frac{M}{N}&\intertext{\'e il peso molecolare medio}\\
+\end{align*}
+ho l'equazione di stato
+\begin{align*}
+PV=nRT=NKT&\intertext{Riscrivo l'equazione di stato esprimendo la pressione in funzione della densit\'a, temperatura e composizione}\\
+P=(\frac{N}{V})KT=nKT=\frac{\rho}{m_0}KT\\
+P=\frac{1}{\mu}\frac{K_B}{m_P}\rho T&\intertext{definisco il peso molecolare in termini di proton mass}\\
+\frac{1}{\mu}=2X+\frac{3}{4}Y+\frac{Z}{2}
+\end{align*}
+\index{Peso molecolare: particelle libere. ???}
+
+Ricavo la relazione densit\'a di energia cinetica-pressione.
+
+\begin{align*}
+\epsilon=\frac{E}{V}=\frac{1}{V}\frac{3}{2}NK_BT&\intertext{Relazione tra pressione e concentrazione degli elettroni.}\\
+P=\frac{2}{3}\epsilon
+\end{align*}
+
+\subsection{Pressione di radiazione}
+For radiative equilibrium
+\begin{equation*}
+F_{RAD}=-\frac{d}{dr}(\frac{a}{3}T^4)=-\frac{dP_R}{dr}
+\end{equation*}
+
+\subsection{Gas di Fermi non relativistico}
+
+\begin{itemize}
+
+\item Degenerazione.
+
+\begin{equation*}
+n_e\,d^3x\,d^3p\leq2\frac{d^3x\,d^3p}{h^3}
+\end{equation*}
+
+\item Densit\'a di stati.
+
+
+\begin{align*}
+dN=\frac{1}{8}4\pi n^2dn&\intertext{da cui ricavo la densit\'a imponendo le condizioni periodiche al bordo del volume $V=L^3$}\\
+g(k)=\frac{dN(k)}{d^3k}=\frac{dN(k)}{4\pi k^2dk}=\frac{\nu V}{(2\pi)^3}
+\end{align*}
+
+\item Energia gas di Fermi completamente degenere: $T=0$.
+\begin{equation*}
+N=\int g(k)F(k)d^3k=\frac{\nu V}{(2\pi)^3}\int_0^{K_F}4\pi k^2\,dk=\frac{\nu V}{2\pi^2}\frac{k_F^3}{3}
+\end{equation*}
+da cui ricavo la densit\'a
+\begin{equation*}
+n=\frac{\nu}{6\pi^2}k_F^3
+\end{equation*}
+
+e adesso introduco la densit\'a di energia e ricavo la sua dipendenza da n
+\begin{align*}
+\epsilon=\frac{\hbar^2k^2}{2m_0}\quad(\epsilon_F=\frac{\hbar^2k_F^2}{2m_0})\\
+E=\int\epsilon(k)F(k)g(k)d^3k=\frac{\nu V}{2\pi^2}\frac{\hbar^2}{2m_0}\frac{k_F^5}{5}\\
+\frac{E}{N}=\frac{3}{5}\epsilon_F\\
+\epsilon=\frac{E}{V}=\frac{E}{N}\frac{N}{V}=\frac{3}{5}\epsilon_Fn\propto n^{\frac{5}{3}}
+\end{align*}
+e per la pressione di un gas di Fermi di elettroni completamente degenere
+\begin{align*}
+P&=-\frac{\partial E}{\partial V}|_{S,N}=n^2\frac{\partial(\frac{E}{N})}{\partial n}|_{S,N}\propto n^{\frac{5}{3}}\\
+P&=K_{NR}\rho^{\frac{5}{3}}
+\end{align*}
+
+\end{itemize}
+
+
+
+\subsection{Gas di Fermi relativistico}
+\begin{itemize}
+
+\item Energia.
+
+\begin{equation*}
+\epsilon(k)=\sqrt{(\hbar ck)^2+(m_0c^2)^2}
+\end{equation*}
+
+\item Parametri adimensionali.
+
+\begin{align*}
+y=\frac{\hbar}{m_0c}k=\lambdabar k\\
+\lambdabar k_F=x
+\end{align*}
+
+\item densit\'a di particelle.
+
+\begin{equation*}
+n=\frac{8\pi c^3m^3}{3h^3}x^3=5.87*10^{29}x^3
+\end{equation*}
+
+\item Energia cinetica.
+
+\begin{equation*}
+P\propto n^{\frac{4}{3}}
+\end{equation*}
+
+\end{itemize}
+
+\subsection{Relazione elettroni/Ioni}
+\begin{equation*}
+N_E=\frac{1}{\mu_E}\frac{\rho}{m_P}\quad\frac{1}{\mu_E}=X+\frac{1}{2}Y+\frac{1}{2}Z\approx\frac{1}{2}(1+X)
+\end{equation*}
+
+Condizioni per la degenerazione degli atomi: nuclei have on the average the same energy as electron, il momento \'e maggiore di un fattore radice quadrata del rapporto fra le masse per grado di libert\'a e quindi sono distribuiti nello spazio delle fasi su un volume $(2000)^{\frac{3}{2}}$ maggiore.
+Per gli atomi possiamo usare
+\begin{equation*}
+P_A=\frac{1}{\mu_A}\frac{K}{m_P}\rho T\quad\frac{1}{\mu_A}=X+\frac{1}{4}Y
+\end{equation*}
+
+\subsection{Boundaries between D/ND and in latter R/NR}
+
+Electron pressure for complete degeneracy
+\begin{equation*}
+P_E=\int_{|p|\leq p_0}\,d^3p\,p_xv_x\frac{2}{h^3}
+\end{equation*}
+e utilizzando l'opportuna relazione (R/NR) tra v e p trove la pressione nei due casi per gas di elettroni completamente degenere
+
+\begin{itemize}
+\item Relativistico: $v=\frac{p}{m}$.
+\begin{equation*}
+P_E=\frac{2\pi c}{3h^3}p_0^4=K_2(\frac{\rho}{\mu_E})^{\frac{4}{3}}
+\end{equation*}
+
+\item Non relativistico $v_x=c\frac{p_x}{|p|}$.
+\begin{equation*}
+P_E=\frac{8\pi}{15mh^3}p_0^5=K_1(\frac{\rho}{\mu_E})^{\frac{5}{3}}
+\end{equation*}
+
+\end{itemize}
+
+\begin{itemize}
+\item Confine tra zona degenere e non degenere.
+
+\begin{align*}
+\frac{1}{\mu_E}\frac{K}{m_P}\rho T=K_1(\frac{\rho}{\mu_E})^{\frac{5}{3}}\\
+\frac{1}{\mu_E}\rho=(\frac{KT}{m_PK_1})^{\frac{3}{2}}
+\end{align*}
+\item Confine tra zona degenere relativistica e non.
+
+\begin{equation*}
+\frac{1}{\mu_E}\rho=(\frac{K_2}{K_1})^3=1.916*10^6
+\end{equation*}
+
+\end{itemize}
+
+Il sole \'e descrivibile con equazioni non degeneri le nane bianche con equazioni degeneri.
+
+\subsection{Mass/radius relation.}
+L'equazioni di stato \'e indipendente da T
+\begin{align*}
+P=\frac{\pi m^4c^5}{3h^3}f(x)\\
+\rho=\mu_E\frac{8\pi m_Pm^3c^3}{3h^3}x^3&\intertext{con}\\
+x=\frac{p_0}{mc}\quad \mu_E=\frac{2}{1+X}
+\end{align*}
+Posso separare il problema idrostatico da quello termodinamico.
+
+Equilibrio idrostatico:
+\begin{align*}
+\frac{dP}{dr}=-\rho\frac{GM_r}{r^2}\\
+\frac{dM_r}{dr}=4\pi r^2\rho
+\end{align*}
+da integrare numericamente(Chandrasekhar).
+
+Qualitativamente
+\begin{itemize}
+\item The larger the mass of a white dwarf the smaller the radius.
+\item Per nane bianche con circa massa solare il raggio \'e centinaia di volte pi\'u piccolo del sole.
+\end{itemize}
+
+Limite superiore per la massa di una stella completamente degenere.
+
+Quantit\'a che influenzano l'equilibrio idrostatico:
+\begin{align*}
+\rho\propto\frac{M}{R^3}&\intertext{questa sopra \'e la densit\'a, questa sotto l'attrazione gravitazionale}\\
+\rho\frac{GM_r}{r^2}\propto\frac{M^2}{R^5}
+\end{align*}
+
+Per la pressione:
+\begin{align*}
+P\propto\rho^{\frac{5}{3}}\propto\frac{M^{\frac{5}{3}}}{R^5}&\intertext{per stelle meno massive ho la pressione NR (sopra), per stelle massive uso la formula R (sotto)}\\
+P\propto\rho^{\frac{4}{3}}\propto\frac{M^{\frac{4}{3}}}{R^4}
+\end{align*}
+
+il cui gradiente genera una forza di pressione
+\begin{align*}
+F_P&\propto\frac{M^{\frac{5}{3}}}{R^6}\quad\text{NR-D}\\
+&\frac{M^{\frac{4}{3}}}{R^5}\quad\text{R-D}
+\end{align*}
+
+Osservazioni:
+\begin{itemize}
+\item In the relativistic case gravitational force and pressure force depend on the same power of radius.
+\item In R-D the 2 forces depend on different power of mass.
+\end{itemize}
+
+\subsection{Politrope}
+Chiamo la funzione di sotto politropa di ordine n
+\begin{equation*}
+P=K\rho^{\gamma}=K\rho^{\frac{n+1}{n}}
+\end{equation*}
+
+\begin{itemize}
+\item Caso NR.
+\begin{equation*}
+P=K_{NR}\rho^{\frac{5}{3}}\quad N=\frac{3}{2}
+\end{equation*}
+
+\item Caso R.
+\begin{equation*}
+P=K_{UR}\rho^{\frac{4}{3}}\quad n=3
+\end{equation*}
+\end{itemize}
+
+
+Equazione di Lane-Emden:
+Considero l'equilibrio idrostatico
+\begin{align*}
+\frac{dP}{dr}&=-G\frac{\rho(r)m(r)}{r^2}\\
+\frac{dm}{dr}&=4\pi r^2\rho(r)&\intertext{con le condizioni al contorno:}\\
+\rho(r=0)&=\rho_c\quad \rho=\frac{m_p}{Y_e}n_e=\mu_em_pn_e\quad\frac{1}{Y_e}=\frac{\exv{A}}{\exv{Z}}\\
+\frac{d\rho}{dr}|_0&=0
+\end{align*}
+\index{Peso molecolare medio elettroni}
+
+Riscrivo l'equazione dell'equilibrio idrostatico
+\begin{equation*}
+\frac{d}{dr}(\frac{r^2}{\rho(r)}\frac{dP}{dr})=-G\frac{dm(r)}{dr}=-G4\pi r^2\rho(r)
+\end{equation*}
+e ipotizzo 
+\begin{align*}
+\rho(\xi)=\rho_c\theta^n(\xi)&\intertext{e ho definito a con}\\
+r=a\xi\quad a^2=\frac{(n+1)K}{4\pi G}\rho_c^{\frac{1-n}{n}}\\
+P=K\rho^{\frac{n+1}{n}}=P_c\theta^{n+1}(\xi)
+\end{align*}
+per trovare la pressione devo risolvere l'equazione di Lane-Emden
+\begin{align*}
+\frac{1}{\xi^2}\frac{d}{d\xi}(\xi^2\frac{d\theta}{d\xi})=-\theta^n(\xi)&\intertext{con le condizioni al contorno}\\
+\theta(\xi=0)=1\quad\frac{d\theta}{d\xi}|_{\xi=0}=0
+\end{align*}
+
+Raggio stellare: $\rho(r=R)=0$, primo zero della $\theta$.
+\begin{equation*}
+R=a\xi_1=B_n\rho_c^{\frac{1-n}{2n}}\quad\theta^n(\xi_1)=0
+\end{equation*}
+
+Massa stellare: $M=m(R)$.
+\begin{equation*}
+M=m(R)=m(a\xi_1)=\int_0^R\rho(r)4\pi r^2\,dr=A_n\rho_c^{\frac{3-n}{2n}}
+\end{equation*}
+
+Elimino la densit\'a centrale e ottendo una relazione tra massa e raggio
+\begin{equation*}
+M(n,R)=\frac{A_n}{B_n^{\frac{3-n}{1-n}}}R^{\frac{3-n}{1-n}}
+\end{equation*}
+
+\begin{itemize}
+\item Caso NR: $n=\frac{3}{2}$.
+\begin{equation*}
+M_{\frac{3}{2}}(R)\propto R^{-3}
+\end{equation*}
+\item Caso R: $n=3$.
+\begin{equation*}
+M_3(R)=const
+\end{equation*}
+\end{itemize}
+
+Trovo che esiste una massa limite per raggio tendente a zero e densit\'a infinita:
+\begin{equation*}
+M_{CSK}=M_3(R)=\frac{5.8\msun}{\mu_e^2}
+\end{equation*}
+
+\subsection{Interazione Ioni-elettroni}
+Il contributo Coulombiano alla pressione diminuisce la massa limite:
+\begin{equation*}
+P_C\propto-e^2\exv{Z}^{\frac{2}{3}}n_e^{\frac{4}{3}}<0
+\end{equation*}
+
+%http://dujs.dartmouth.edu/wp-content/uploads/2008/04/09-whitedwarf.pdf
+%http://upcommons.upc.edu/e-prints/bitstream/2117/18798/1/303_bravo.pdf
+%http://www.astro.uvic.ca/~fherwig/TEACHING/ASTR501/StudentPresentations/EOS%20ASTR401%20MichaelP.pdf
+%http://w.astro.berkeley.edu/~gmarcy/astro160/papers/physics_of_white_dwarfs.pdf
+%
+
+\end{document}

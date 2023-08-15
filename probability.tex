@@ -1,0 +1,92 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{Probability and statistics}
+%\PartialToc
+
+\section{Kolmogorov axioms}
+$X_i$ elementary events mutually exclusive
+\begin{align*}
+&\prob{(X_i)}\geq0,\ \forall i\\
+&\prob{(X_i\cup X_j)}=\prob{(X_i)}+\prob{(X_j)}\\
+&\sum_{\Omega}\prob{(X_i)}=1
+\end{align*}
+A, B insiemi di eventi elementari $X_i$ non esclusivi, $\prob{(A|B)}$ \'e prob. che evento elementare che appartiene a B sia anche in A
+\begin{align*}
+&\prob{(A\cap B)}=\prob{(A|B)}\prob{(B)}\\
+&=\prob{(B|A)}\prob{(A)}\\
+&\prob{(A\cup B)}=\prob{(A)}+\prob{(B)}-\prob{(A\cap B)} 
+\end{align*}
+\begin{itemize}
+\item Eventi indipendenti: joint probability equals product of probability
+\begin{align*}
+&\prob{(A\cap B)}=\prob{(A)}\prob{(B)}\Leftrightarrow \prob{(A)}\\
+&=\frac{\prob{(A\cap B)}}{\prob{(B)}}=\prob{(A|B)}
+\end{align*}
+\item teorema probabilit\'a totale: $A\cap B=\emptyset$, $\prob{(A\cup B)}=\prob{(A)}+\prob{(B)}$
+\end{itemize}
+
+\section{Frequentist probability}
+
+In un esperimento sono osservati n eventi del tipo X, la probabilit\'a che un evento qualsiasi sia X \'e $\lim_{N\to\infty}\frac{n}{N}$: esperimenti ripetibili
+
+\section{Bayesian probability}
+
+Degree of belief is basis of Bayesian probability: largest amount willing to bet divided fixed winning amount - propriet\'a del sistema/osservatore
+\begin{align*}
+&\pi(\mu)=\frac{L_{x_0}(\mu)\prior(\mu)}{norm}\\
+&P(\mu_1>\mu_2)=\int_0^{\infty}\,d\mu_2\int_{\mu_2}^{\infty}\pi(\mu_1,\mu_2)\,d\mu_1
+\end{align*}
+
+\chapter{Probabilit\'a applicata a RV}
+%\PartialToc
+
+\section{Probabiblit\'a. pdf, momenti, }
+
+Probability convergence: Una sequenza di RV $\{X_n\}\to X$ in probabilit\'a se $\lim_{n\to\infty}\prob{(|X_n-X|)>\epsilon}$=0.
+
+disuguaglianza di Chebychev: X ha media $\mu$ e var $\sigma^2$ e $\lambda>0$:
+\[\prob{(|X-\mu|<\lambda\sigma)}\geq1-\frac{1}{\lambda^2}\]
+
+\section{Legge grandi numeri e teorema del limite centrale}
+
+
+Legge grandi numeri - Teorema limite centrale
+$X_1,\ldots,X_n$ iid RV (RV campionata n volte): $\E{X_i}=\mu$, finite variance: $\var{X_i}=\sigma^2$ allora \[\prob{(|\overline{X}_n-\mu|>\epsilon)}\leq\frac{\sigma^2}{n\epsilon^2}\]
+
+\begin{align*}
+&\var{\overline{X}_n}=\var{\frac{1}{n}(X_1+\ldots+X_n)}\\
+&=\frac{1}{n^2}\var{(X_1+\ldots+X_n)}\\
+&=\frac{n\sigma^2}{n^2}=\frac{\sigma^2}{n}\\
+&\prob{(|\overline{X}_n-\mu|>\epsilon)}\leq\frac{\sigma^2}{n\epsilon^2}
+\end{align*}
+
+Per ogni RV con $\mu$ finita $\phi_X(t)\approx1+i\mu t+o(t)$,$\phi_{\frac{1}{n}X}(t)=\phi_X(\frac{t}{n})$, $\phi_{X+Y}(t)=\phi_X(t)\phi_Y(t)$:
+$\phi_{\overline{X}_n}(t)=[\phi_X(t)]^n=[1+it\mu+\ldots]^n\to\exp{i\mu t}$: Levy theorem implies $\overline{X}_n\to\mu$.
+
+LLN: asintoticamente gaussiana - Teorema limite centrale (CLT)
+Se esistono momenti $\mu_1, \mu_2$ finiti vale LLN: $\overline{x}_n-\mu\xrightarrow{P}0$
+\begin{align*}
+&\var{(\overline{x}_n-\mu)}=\var{(\frac{S_N}{N})}\\
+&=\frac{1}{N^2}\var{(S_N)}=\frac{\sigma^2}{N}\\
+&\var{(S_N)}=\sum(\PDy{x_i}{S_N})^2\sigma_i^2
+%&\phi(t)=\phi_{X-\mu}
+\end{align*}
+
+\begin{align*}
+&y_N=\sqrt{\frac{N}{\sigma^2}}(\overline{x}-\mu)\\
+&\E{[y_N]}=0,\ \var{[y_N]}=1\\
+&\phi_N=[\phi(\frac{t}{\sigma\sqrt{N}})]^N
+\end{align*}
+
+\begin{align*}
+&\phi(t)=\sum_{m=0}^{\infty}\left.\frac{d^m\phi}{dt^m}\right|_{t=0}\frac{t^m}{m!}\\
+&=\sum_{m=0}^{\infty}\frac{(it)^m}{m!}\E{(y^m)}\approx1-\frac{t^2}{2N}\sigma^2-\frac{it^3}{3!}\frac{\E{[(x-\mu)^3]}}{n\expy{3/2}}+\ldots
+&\log{\phi_N}=N\log{\phi(\frac{t}{\sigma\sqrt{N}})}\approx N[\frac{it\mu}{\sigma\sqrt{N}}+\frac{(it)^2\sigma^2}{2\sigma N}+o(\frac{t^3}{N\expy{\frac{3}{2}}})]\to-\frac{t^2}{2}\\
+%\text{Per T Levy la pdf \'e:}\\
+&\frac{1}{2\pi}\int\exp{-\frac{t^2}{2}}\exp{-itx}d\,t=\frac{1}{2\pi}\int\exp{(t+ix)^2-\frac{x^2}{2}}\,dt=\frac{\exp{-\frac{x^2}{2}}}{\sqrt{2\pi}}
+\end{align*}
+
+
+\end{document}

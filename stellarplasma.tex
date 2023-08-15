@@ -1,0 +1,121 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{Comportamento materia densit\'a temperature stellari}
+%\PartialToc
+
+\section{EOS}
+
+\subsection{Fully ionized perfect gas}
+
+\keyword{perfect gas}: potential energy between particle negligible respect kinetic energy and de Broglie $\lambda_{dB}=\frac{h}{p}\ll\lambda$ mean distance between particles - maxwell distro with mean kinetic energy $\frac{3}{2}kT$:
+\begin{align*}
+&kT>\frac{Z^2e^2}{d}\\
+&\frac{4\pi}{3}nd^3=\frac{4\pi\rho}{3\mu m_H}d^3=1\\
+&d\approx(\frac{\mu m_H}{\rho})\expy{1/3}\\
+&\frac{h}{p}=\frac{h}{\sqrt{2mkT}}\ll d
+\end{align*}
+\keyword{Free energy per unit mass of perfect gas}:
+\begin{align*}
+&F=-kT\sum_sN_s[\frac{3}{2}\ln{T}-\ln{(N_s\rho)}+\ln{G_s}+1+\ln{g_s}]+F_{int}
+\end{align*}
+$g_s$ statistical weight (number of state with same energy), $G_s=(2\pi km_s/h^2)\expy{3/2}$, $F_{int}$ energia libera particelle con stati legati
+
+\subsection{Non-ideal corrections: Interazione coulombiana}
+
+Corrections parametrized by $\Gamma=\frac{(Ze)^2}{dkT}$: when density suff. low $\Gamma\approx0$; for fully ionized mixture
+\begin{align*}
+&\Gamma=\frac{\exv{Z}\expy{1/3}e^2}{d'kT}\exv{Z\expy{5/3}}\\
+&d'=(\frac{4\pi\rho}{3\mu_im_H})\expy{-1/3}
+\end{align*}
+La principale correzione che tiene conto dell'interazioni tra particelle \'e dovuta alle interazioni coulombiane.
+
+\begin{workout}[Correzioni interazioni coulombiane- vedi schermaggio]
+
+\end{workout}
+
+La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
+\begin{equation}\label{eq:Bdistroelectricpot}
+n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
+\end{equation}
+con $\overline{n}_Z$ densit\'a numerica della particella di carica $Z$ in assenza di $Z_i$.
+
+L'equazione di Poisson per $\phi$ \'e
+\begin{equation}\label{eq:poissonscreened}
+\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)
+\end{equation}
+
+Nel regime di schermaggio debole, dove l'energia coulombiana \'e molto minore dell'energia termica $e\phi\ll KT$, espando $n_Z$ (\eqref{eq:Bdistroelectricpot}) al prim'ordine quindi in \eqref{eq:poissonscreened} rimane il termine lineare in $\phi$.
+
+Introduco il raggio di Debye:
+\begin{equation}
+\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
+\end{equation}
+quindi dall'equazione \eqref{eq:poissonscreened} ottengo il potenziale generato dallo ione $Z_i$ in $\vec{r}_i$ a distanza $|\vec{r}-\vec{r}_i|=r_i$ come soluzione di:
+\begin{equation}\label{eq:poissonspheric}
+\frac{r_D^2}{r_i}\TtwoDy{r_i}{(r_i\phi_i)}=\phi_i
+\end{equation}
+con
+\begin{equation}
+\phi=\sum_i\phi_i
+\end{equation}
+
+\begin{workout}[Raggio di debye e degenerazione elettronica]
+Il rapporto fra densit\'a elettronica e quella imperturbata \'e
+\begin{equation}
+\midfrac{f(\psi-\midfrac{U_e(r)}{KT})}{f(\psi)}
+\end{equation}
+dove $U_e(r)$ \'e l'energia di interazione di un elettrone
+\end{workout}
+
+La soluzione di \eqref{eq:poissonspheric} \'e
+\begin{equation}\label{eq:screenedpotential}
+\phi_i=\frac{Z_ie}{r_i}\exp{-\midfrac{r}{r_D}}
+\end{equation}
+
+[formula corretta potenziale elettrostatico generato da nuvola elettronica attorno a $Z_i$]
+
+\begin{align*}
+&\nabla^2V_i=-4\pi e\sum Zn_Z\approx\frac{1}{r_D^2}V_i\intertext{da cui ottengo il potenziale generato dalla nube di cariche attorno a Z}
+&\phi_Z=-\frac{eZ}{r_D}
+\end{align*}
+con $r_D$ raggio di Debye definito da:
+\begin{equation*}
+\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
+\end{equation*}
+
+[correzioni $u_c/P_c$: notazione consistente.]
+Le correzioni dovute alle interazioni coulombiane sono
+\begin{align}
+&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\sum_ZeZ\overline{n}_Z\phi_Z=-e^3\sqrt{\frac{\pi\rho}{kT}}(N_A\zeta)\expy{\frac{3}{2}}\\
+&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}u_c
+\end{align}
+
+Le correzioni dovute alle interazioni coulombiane sono
+\begin{align}
+&u=\frac{3}{2}\frac{\gasconstant{}T}{\mu}+u_c,\ \rho u_c=\frac{1}{2}\int\phi(\vec{r})\rho_c(\vec{r})\,d^3r\\
+&P=\frac{\rho}{\mu}kT+P_c,\  P_c=\frac{1}{3}\rho u_c
+\end{align}
+
+\section{Ordini di grandezza}
+
+\subsection{Misure adimensionali interazioni}
+
+Potenziale tra 2 nucleoni $-Gm_H^2/r$ con $r=\frac{h}{2\pi m_Hc}$ (Pindet): in unit\'a $m_Hc^2$ $\alpha_G=\frac{2\pi Gm_H^2}{hc}\approx\num{e-39}$.
+
+$\alpha_{SF}=\frac{e^2}{(4\pi\epsilon_0)\hbar c}$.
+
+The ratio of three characteristic lengths:
+
+the classical electron radius $r_e=(\frac{1}{4\pi\epsilon_0})\frac{e^2}{m_ec^2}$, the Bohr radius $a_0=(4\pi\epsilon_0)\frac{\hbar^2}{m_ee^2}$  and the Compton wavelength of the electron $\lambdabar_e=\frac{\hbar}{m_ec}$:
+
+$r_e=\frac{\alpha\lambda_e}{2\pi}=\alpha^2a_0$.
+
+$e^2=1.44\,MeV\,fm$
+
+TODO: pressure ionizzation and electron degeneracy (why eos for H,He)
+
+\section{neutrino processes}
+
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{astro plasma physics}
+%\PartialToc
+
+La presenza dello ione $Z_i$ altera la distribuzione di cariche quindi devo determinare il potenziale $\phi_i$ generato da $Z_i$ e dalla distribuzione di cariche attorno; usando la formula di Boltzmann la densit\'a delle particelle con carica Z risulta
+\begin{equation}\label{eq:Bdistroelectricpot}
+n_Z=\overline{n}_Z\exp{-\frac{Ze\phi}{kT}}
+\end{equation}
+con $\overline{n}_Z$ densit\'a numerica della particella di carica $Z$ in assenza di $Z_i$.
+
+L'equazione di Poisson per $\phi$ \'e
+\begin{equation}\label{eq:poissonscreened}
+\nabla^2\phi=-4\pi e\sum_Z Zn_Z-4\pi e\sum_i Z_i\delta(\vec{r}-\vec{r}_i)
+\end{equation}
+
+Nel regime di schermaggio debole, dove l'energia coulombiana \'e molto minore dell'energia termica $e\phi\ll KT$, espando $n_Z$ (\eqref{eq:Bdistroelectricpot}) al prim'ordine quindi in \eqref{eq:poissonscreened} rimane il termine lineare in $\phi$.
+
+Introduco il raggio di Debye:
+\begin{equation}
+\frac{1}{r_D^2}=\frac{4\pi e^2}{kT}\sum Z^2\overline{n}_Z=\frac{4\pi e^2}{kT}N_A\zeta,\ \zeta=\sum_{i}(Z_i^2+Z_i)\frac{\rho X_i}{A_i}\label{eq:debyeradius}
+\end{equation}
+quindi dall'equazione \eqref{eq:poissonscreened} ottengo il potenziale generato dallo ione $Z_i$ in $\vec{r}_i$ a distanza $|\vec{r}-\vec{r}_i|=r_i$ come soluzione di:
+\begin{equation}\label{eq:poissonspheric}
+\frac{r_D^2}{r_i}\TtwoDy{r_i}{(r_i\phi_i)}=\phi_i
+\end{equation}
+con
+\begin{equation}
+\phi=\sum_i\phi_i
+\end{equation}
+
+\begin{workout}[Raggio di debye e degenerazione elettronica]
+Il rapporto fra densit\'a elettronica e quella imperturbata \'e
+\begin{equation}
+\midfrac{f(\psi-\midfrac{U_e(r)}{KT})}{f(\psi)}
+\end{equation}
+dove $U_e(r)$ \'e l'energia di interazione di un elettrone
+\end{workout}
+
+La soluzione di \eqref{eq:poissonspheric} \'e
+\begin{equation}\label{eq:screenedpotential}
+\phi_i=\frac{Z_ie}{r_i}\exp{-\midfrac{r}{r_D}}
+\end{equation}
+
+
+\chapter{opacity sources}
+%\PartialToc
+
+\section{Grain opacity in planetary gas accretion}
+$\kappa_{gr}=\frac{Q(x)\pi a^2n_{gr}}{\rho}=\frac{3Q(x)f_{d/g}}{4\rho_{gr}a}$
+If $a\gg\lambda$ $Q(x)\approx2$ with $x=2\pi a/\lambda$
+
+\section{ISM dust}
+%ism-ch3-dust.pdf
+%Dust.pdf
+%%vanderanker_slides.pdf
+%Draine_IPMU_Lectures.pdf
+
+\chapter{Evapopration ??}
+%\PartialToc
+
+Potential
+\begin{align*}
+&\chi(r)=-\frac{GM_p}{r}+C\\
+&\chi'(r)=\chi(r)+\Delta\chi(r)=-G(M_p+M_*)[\frac{\mu}{r}+\frac{1-\mu}{a_p-r}+\frac{((1-\mu)a_p-r)^2}{2a_p^3}]+C\\
+&\mu=\frac{M_p}{M_p+M_*}
+\end{align*}
+Energy needed to escape the planet $\PDy{r}{\chi'}|_{R_h}=0$
+
+\section{Stellar spectrum}
+
+FUV: $\SI{6}{\ev}\leq h\nu\leq\SI{13.6}{\ev}$
+EUV: $\SI{13.6}{\ev}\leq h\nu\leq\SI{0.1}{\kilo\ev}$
+X-rays: $h\nu\geq\SI{0.1}{\kilo\ev}$
+
+\end{document}

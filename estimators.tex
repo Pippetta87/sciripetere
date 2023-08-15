@@ -1,0 +1,73 @@
+\documentclass[main.tex]{subfiles}
+ 
+\begin{document}
+
+\chapter{inference}
+%\PartialToc
+
+\section{Sufficiency}
+
+\subsection{Statistica sufficiente}
+\keyword{stat suff}: A statistic T is called sufficient for unknown parameter $\theta$ iff the conditional pdf of iid RV $X_1,\ldots,X_n$ dato $T=t$ don't involve $\theta$. Ex: \iidrv{X} Bernoulli p. $T=\sum_iX_i$ \'e suff: $\prob{(X_1=x_1\cap\ldots\cap X_n=x_n|T=t)}=0$ se $\sum_ix_i\neq t$; $A=\{\cap_iX_i=x_i\}\subseteq B=\{T=t\}$:
+\begin{align*}
+&\prob{(\cap_iX_i=x_i|T=t)}\\
+&=\prob{(\cap_iX_i=x_i\cap T=t)}/\prob{(T=t)}\tag*{P condizionata}\\
+&=\prob{(\cap_iX_i=x_i\cap T=t)}/\prob{(T=t)}\tag*{sottoinsieme di $T=t$}\\
+&=\prod_i\prob{(X_i=x_i)}/\prob{(T=t)}\tag*{X's independent}
+\end{align*}
+quindi
+\begin{align*}
+&\prob{(\cap_iX_i=x_i|T=t)}\\
+&=\frac{p\expy{\sum_ix_i}(1-p)\expy{n-\sum_ix_i}}{\binom{n}{t}p^t(1-p)\expy{n-t}}\\
+&=1/\binom{n}{t}
+\end{align*}
+\subsection{T. fattorizzazione Neyman}
+iid RV \iidrv{X} pdf $f(x;\theta)$, likelihood $L(\theta)=\prod_if(x_i;\theta)$. $T(X_1,\ldots,X_n)$ \'e suff per $\theta$ iff
+\begin{equation*}
+L(\theta)=g(T(x_1,\ldots,x_n);\theta)h(x_1,\ldots,x_n)
+\end{equation*}
+$A=\{X=x\}\subseteq B=\{T(X)=T(x)\}$; only if:
+\begin{align*}
+&L(\theta)=P_{\theta}(X=x)\\
+&=P_{\theta}(X=x\cap T(X)=T(x))\\
+&=\underbrace{P_{\theta}(T(X)=T(x))}_{g(T(x_1,\ldots,x_n);\theta)}\underbrace{P_{\theta}(X=x|T(X)=T(x))}_{h(x_1,\ldots,x_n)}
+\end{align*}
+If part pg 315
+
+\section{Fisher Information}
+
+\subsection{Score statistics}
+
+\begin{align*}
+&S=\PDy{\theta}{\log{L}}\\
+&\E{[S]}=0\\
+&\var{[S]}=-\E{[\PtwoDy{\theta}{\log{L}}]}=-I\\
+&S\to N(0,I)
+\end{align*}
+
+Informazione di Fisher
+\[I_{\Vec{X}}(\theta)=NI_{X_1}=N\E_{\theta}[(\PDy{\theta}\log{f(X_1;\theta)})^2]=-N\E_{\theta}[\PtwoDy{\theta}\log{f(X_1;\theta)}]\]
+$I_{X}\geq I_T$ uguaglianza vale per T suff.
+
+\section{Propriet\'a stimatori}
+
+\begin{itemize}
+\item consistenza: (LGN) $\E{(\hat{\theta})}\to\theta_0$
+\end{itemize}
+
+\section{Stimatori e caratteristiche patametri pdf: gaussian, poissonian, binom - unif}
+
+MVB:
+
+\section{Stimatore MLE di varianza segnale gaussiano con rumore gaussiano}
+
+statistica suff: $s^2=\sum_ix_i^2$
+stima mle $\hat{\sigma}^2=\max{(s^2/N-\sigma_0,0)}$.
+
+$Y=\alpha X+b$ $\phi_Y(t)=$
+
+var usando funzione GM della gaussiana
+(momento n=2 integrato da $N\sigma_0$
+(CRC PRESS 2000, pg 408)
+
+\end{document}
