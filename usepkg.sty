@@ -37,14 +37,14 @@ Toc:(\hyperlink{outline\thepart}{\thepart})-\hyperlink{outline\thechapter}{\thec
 %\usepackage{braket}
 %\usepackage{booktabs} %% better tabs
 %\usepackage{mdwlist}
-%\usepackage[font=normal,skip=0pt]{caption}
-%\usepackage{subcaption}
+\usepackage[font=normal,skip=0pt]{caption}
+\usepackage{subcaption}
 \usepackage{calc}
 %\usepackage{xassoccnt}
 \usepackage{nameref}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
-\usepackage{filecontents}
+%\usepackage{filecontents}%obsolete->latex kernel
 %\usepackage{tikz-er2}
 \usetikzlibrary{
 arrows,
@@ -58,6 +58,7 @@ decorations.pathreplacing,shapes.geometric,backgrounds,
 shadows
 }
 \usepackage{pgfplots}
+\pgfplotsset{compat=newest}
 \usepackage{fp}
 \usepackage{csquotes}
 %http://tex.stackexchange.com/questions/39285/whats-the-advantage-of-using-csquotes-over-using-an-editors-auto-replacement-f
