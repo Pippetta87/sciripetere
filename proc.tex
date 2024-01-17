@@ -1,5 +1,5 @@
-%\documentclass[main.tex]{subfiles}
-    \begin{filecontents}{procem.bib}
+%%\documentclass[main.tex]{subfiles}%%    
+\begin{filecontents}{procem.bib}%%
     @book{longair2010high,
     title={High energy astrophysics},
     author={Longair, Malcolm S},
@@ -26,7 +26,10 @@
     keywords={}
     }
     \end{filecontents}
-%\begin{document}
+%%
+%%\begin{document}
+%%
+    \addcontentsline{main.toc}{part}{Context of Processi Astrofisici} 
 \part{Costanti astrofisiche}
     \chapter{Unit\'a di misura}
         \begin{itemize}
@@ -49,7 +52,7 @@
         \item Parametri termodinamici sono quantit\'a macroscopiche misurabili (P, V, T, H, \ldots)
         \item Uno stato termodinamico \'e specificato dai parametri; $f(P,V,T)=0$ definisce superficie in PVT e i punti soni stati di equilibrio.
         \item Equilibrio: stato non cambia nel tempo
-        \item Equazione di stato \'e una relazione funzionale tra i parametri termodinamicidi un sistema all'equilibrio
+        \item Equazione di stato \'e una relazione funzionale tra i parametri termodinamici di un sistema all'equilibrio
         \item Una trasformazione termodinamica \'e un cambio di stato; una trasformazione da stato equilibrio \'e possibile per cambio condizioni esterne al sistema. La trasformazione \'e quasi-statica se \'e cos\'i lenta da passare da stati di equilibrio. Una trasformazione \'e reversibile se riportando indietro nel tempo la condizione esterna la trasformazione ripercorre la sua storia. Una trasformazione reversibile \'e quasi statica ma non nec. vv.
         \item Lavoro meccanico; per parametri PVT: $d\,W=Pd\,V$.
         \item Il calore \'e ci\'o che viene assorbito dal sistema se T aumenta senza che venga compiuto lavoro. $\Delta Q=C\Delta T$.
@@ -69,7 +72,7 @@
         \end{align*}
     \chapter{Seconda Legge termodinamica}
         \begin{itemize}
-        \item Enunciato kelvin: Non esiste trasformazione termodinamica il cui solo effetto \'e di estrarre calore da serbatoio e convertirlo interamente in calore
+            \item Enunciato kelvin: Non esiste trasformazione termodinamica il cui solo effetto \'e di estrarre calore da serbatoio e convertirlo interamente in lavoro.
         \item Enunciato Clausius: Non esiste trasformazione il cui solo effetto \'e quello di trasferire calore da serbatoio pi\'u freddo a uno pi\'u caldo
         \end{itemize}
         \section{Teorema di Carnot}
@@ -236,21 +239,21 @@
                         Supponiamo di dividere il cilindro con una lastra trasparente per l'onda $\nu_1$ e opaca per $\nu_2$ compresa tra due specchi: abbiamo inizialmente due camere distinte nelle quali si stabiliscono radiazioni nere con stessa densit\'a di energia dato che T \'e la stessa ma a sinistra avremo prevalenza di $\nu_1$; togliamo gli specchi: onda $\nu_1$ propaga energia per ristabilire la stessa densit\'a di energia per onda $\nu_1$ ma ci\'o provoca emissione da A e diminuzione di T e aumento di T per B. Assurdo: \ref{pkhhff} \'e valida sempre.
                 \end{itemize}
             \section{densit\'a energia radiante in una cavit\'a}
-                Una cavit\'a con pareti assorbenti in equilibrio termico si ha radiazione nera; determino relazione tra densit\'a di energia della cavit\'a e potere emissivo. Su unit\'a di superficie arriva nell'unit\'a di tempo e per angolo solido $d\,\Omega$ l'energia contenuta entro una distanza percorsa da c in unit\'a di tempo e la stessa energia viene emessa dalla superficie: densit\'a di energia $d(\nu,T)=\frac{2}{c}E(\nu,T)\int d\,\Omega=\frac{4\pi}{c}E(\nu,T)$; analogamnete per corpo non nero $d(\nu,T)=\frac{4\pi}{c}\frac{e(\nu,T,x)}{a(\nu,T,x)}$, ovvero per pareti in equilibrio termico si ottiene relazione precedente.
+            Una cavit\'a con pareti assorbenti in equilibrio termico si ha radiazione nera; determino relazione tra densit\'a di energia della cavit\'a e potere emissivo. Su unit\'a di superficie arriva per unit\'a di tempo, angolo solido $d\,\Omega$ l'energia contenuta entro una distanza percorsa da c in unit\'a di tempo e la stessa energia viene emessa dalla superficie: densit\'a di energia $d(\nu,T)=\frac{2}{c}E(\nu,T)\int d\,\Omega=\frac{4\pi}{c}E(\nu,T)$; analogamnete per corpo non nero $d(\nu,T)=\frac{4\pi}{c}\frac{e(\nu,T,x)}{a(\nu,T,x)}$, ovvero per pareti in equilibrio termico si ottiene relazione precedente.
         \section{Pressione di Radiazione: esperimento termodinamico}
             \subsection{La radiazione esercita pressione} 
-                Ciclo termodinamico - Considero cilindro a  pareti adiabatiche con basi due corpi assorbenti qualunque mantenuti a $B:T_2<T_1:A$ e uno stantuffo riflettente per ora vincolato a $s_1$ in maniera che possa andare solo verso A($T_1>T_2$): la densit\'a di energia $d_1>d_2$; inseriamo stantuffo a $s_2$ vicino B: abbiamo intrappolato della radiazione tra stantuffo 1 e 2 e spostando 2 da $s_2$ la densit\'a aumenta dal valore iniziale $d_2$ fino a raggiunger $d_1$: la parte con densit\'a $d_1$ \'e ora maggiore a scapito dell'energia fornita da B; se continuiamo a spostare stantuffo 2 verso A l'energia in eccesso \'e assorbita da A e quella mancante fornita da B fino a raggiungere $s_1$: tutta l'energia contenuta tra i due stantuffi \'e passata in A e il sistema \'e ritornato alle condizioni iniziali; per secondo principio della termodinamica \'e possibile trasferire calore da corpo a temperatura minore a uno a temperatura maggiore solo facendo lavoro per spostare gli stantuffila radiazione esercita pressione sui corpi su cui incide.
-            \subsection{Pressione proporzionale alla densit\'a di energia}i
+                Ciclo termodinamico - Considero cilindro a  pareti adiabatiche con basi due corpi assorbenti qualunque mantenuti a $B:T_2<T_1:A$ e uno stantuffo riflettente per ora vincolato a $s_1$ in maniera che possa andare solo verso A($T_1>T_2$): la densit\'a di energia $d_1>d_2$; inseriamo stantuffo a $s_2$ vicino B: abbiamo intrappolato della radiazione tra stantuffo 1 e 2 e spostando 2 da $s_2$ la densit\'a aumenta dal valore iniziale $d_2$ fino a raggiunger $d_1$: la parte con densit\'a $d_1$ \'e ora maggiore a scapito dell'energia fornita da B; se continuiamo a spostare stantuffo 2 verso A l'energia in eccesso \'e assorbita da A e quella mancante fornita da B fino a raggiungere $s_1$: tutta l'energia contenuta tra i due stantuffi \'e passata in A e il sistema \'e ritornato alle condizioni iniziali; per secondo principio della termodinamica \'e possibile trasferire calore da corpo a temperatura minore a uno a temperatura maggiore solo facendo lavoro: per spostare gli stantuffi la radiazione esercita pressione sui corpi su cui incide.
+            \subsection{Pressione proporzionale alla densit\'a di energia}
                 Immaginiamo di spingere stantuffo 1 verso  A di un tratto l: sia S la superficie dello stantuffo e $P_1,P_2,d_1,d_2$ la pressione, energia nelle due parti, A assorbe energia $d_1lS$, mentre B emette $d_2lS$ e il lavoro compiuto sullo stantuffo \'e $L=(P_1-P_2)lS$ quindi $(P_1-P_2)lS=(d_1-d_2)lS$ e si vede che $d=P$.
                 Infine considerando la media sulle 3 dimensioni si ha $P=\frac{1}{3}d$(parete assorbente). EOS: $PV=\frac{1}{3}dV=\frac{1}{3}U$ (Gas perfettomonoatomica: $PV=NkT=\frac{2}{3}U$).
-        \section{Radiation pressure: momentum trasfer(chandra: pg 191)}
+        \section{Radiation pressure: momentum trasfer ( chandra: pg 191 )}
             \subsection{Momentum transfer across element surface} 
-                    Radiation of energy E traversin medium in a gi ven direction carries momentum $\frac{E}{c}=\frac{h\nu}{c}$ and to calculate radiation pressure at P we need to consider net momentum transfer across arbitrarily element surface $dS$ containing P: radiation energy traversing surface at angle $\theta$ to normal of $dS$ in directions specified by $d\Omega$ in time $dt$ is $I_{\nu}\cos{\theta}d\,\Omega d\,\nu d\,Sd\,t$, hence normal component to $dS$ of momentum is $\frac{1}{c}d\,Sd\,tI_{\nu}\cos^2{\theta}d\,\Omegad\,\nu$; if the radiation is isotropic the integration over sphere reduce to
+                    Radiation of energy E traversin medium in a given direction carries momentum $\frac{E}{c}=\frac{h\nu}{c}$ and to calculate radiation pressure at P we need to consider net momentum transfer across arbitrarily element surface $dS$ containing P: radiation energy traversing surface at angle $\theta$ to normal of $dS$ in directions specified by $d\Omega$ in time $dt$ is $I_{\nu}\cos{\theta}d\,\Omega d\,\nu d\,Sd\,t$, hence normal component to $dS$ of momentum is $\frac{1}{c}d\,Sd\,tI_{\nu}\cos^2{\theta}d\,\Omegad\,\nu$; if the radiation is isotropic the integration over sphere reduce to
                     \begin{equation*}
                     P_{RAD}=2\pi I_{\nu}\frac{1}{c}\int_0^{\pi}\cos^2{\theta}\sin{\theta}d\,\theta=\frac{4}{3c}\pi I_{\nu}    
                     \end{equation*}
             \subsection{Energy density of radiation}
-                    Let take invi nitesima element volume $v$ centered at P, delimited by surfase $\sigma$(convex); we surround $\sigma$ by much bigger surface $\Sigma$(convex) but suff. small that intensity in a given dir. is the same for all points inside. Energy flowing across $d\,\Sigma$ and $d\,\sigma$ per unit time $I \frac{\cos{\theta}\cos{\Theta}d\,\sigma d\,\Sigma}{r^2}$ where $\theta,\Theta$ are angles made by direction connecting two element surface and their normals; being l distance travelled by light inside v, total amount of radiant energy transiting through $v$ by considered pencil is:
+                    Let's take infinitesimal element volume $v$ centered at P, delimited by surfase $\sigma$(convex); we surround $\sigma$ by much bigger surface $\Sigma$(convex) but suff. small that intensity in a given dir. is the same for all points inside. Energy flowing across $d\,\Sigma$ and $d\,\sigma$ per unit time $I \frac{\cos{\theta}\cos{\Theta}d\,\sigma d\,\Sigma}{r^2}$ where $\theta,\Theta$ are angles made by direction connecting two element surface and their normals; being l distance travelled by light inside v, total amount of radiant energy transiting through $v$ by considered pencil is:
                     \begin{align*}
                     &I \frac{\cos{\theta}\cos{\Theta}d\,\sigma d\,\Sigma}{r^2}\frac{l}{c}\\
                     &=I \frac{d\,v}{c}d\,\omega\\
@@ -275,11 +278,11 @@
                 \end{equation*}
                 Spontaneous emission is uniform in all dir so no net force. Induced emission is in pencil direction so it's opposite to absorption.
         \section{Termodinamica radiazione nera: Legge di Stefan-Boltzmann}
-                Il calore irraggiato dal corpo nero \'e $E(T)=\sigma T^4$.
-                Macchina di Carnot reversibile che lavara su radiazione nera: considero cilindro di volume V adiabatico chiuso da stantuffo contenente radiazione di corpo nero a temperatura T. Per PTII:
+        Il calore irraggiato dal corpo nero \'e $E(T)=\sigma T^4$ (per unit surface and time).
+                Macchina di Carnot reversibile che lavora su radiazione nera: considero cilindro di volume V adiabatico chiuso da stantuffo contenente radiazione di corpo nero a temperatura T. Per PTII:
                 \begin{align*}
-                    &\PDy{V}{U}|_T=T\PDy{T}{P}|_V-P,\ U(V,T)=Vd(T):\\
-                    &d(T)=T\PDy{T}{P}|_V-P,\ P=\frac{1}{3}d:\\
+                    &\PDy{V}{U}|_T=T\PDy{T}{P}|_V-P,\quad U(V,T)=Vd(T):\\
+                    &d(T)=T\PDy{T}{P}|_V-P,\quad P=\frac{1}{3}d:\\
                     &4\frac{d(T)}{T}=\PDy{T}{d(T)}\Rightarrow d(T)=\const{}T^4
                 \end{align*}
                 E ricordando la relazione tra potere radiante E(v. P di \khhff) e la densit\'a di energia radiante si ha la legge si SB $E(T)=\sigma(T^4-T_0^4)$.
@@ -290,9 +293,82 @@
                         \begin{align*}
                             &E(\lambda,T)=T^5f_1(\lambda T)\\
                             &E(\lambda,T)d\,\lambda=T^5f_1(\lambda T)d\,\lambda=\lambda\invers{5}(\lambda T)^5f_1(\lambda T)d\,\lambda=\lambda\invers{5}f_2(\lambda T)\Tdy{\nu}{\lambda}d\,\lambda=-\frac{\nu^5}{c^5}f_2(\cfrac{T}{\nu})\frac{c}{\nu^2}d\,\nu\tag{$\lambda=\frac{c}{\nu}$}\\
-                            &=\nu^3f(\frac{\nu}{T})d\,\nu
+                            &=\nu^3f(\frac{\nu}{T})d\,\nu\\
+                            &E(T)=\int_0^{\infty}\nu^3f(\frac{\nu}{T})d\,\nu=T^4\int_0^{\infty}y^3f(y)d\,y=\sigma T^4\tag{SB}
                         \end{align*}
+                    \item Legge dello spostamento: massimo della distribuzione dell'energia varia con T come $\lambda_mT=\SI{0.290}{\cm\kelvin}$ ($f_1(\lambda_mT)=\SI{2200e-17}{\erg\per\square\cm\persecond\per\kelvin\tothe{-5}}$).
+                    \item Temperatura del radiatore: $T\approx\frac{A}{\lambda_m}$, per fotosfera solare $\lambda_m=$\SI{0.42}{\micro\meter} che corrisponde a $T_m=\SI{6980}{\kelvin}$. 
                 \end{itemize}
+                \subsection{Dimostraione legge Wien}
+                    \begin{itemize}
+                        \item In una trasformazione adiabatica reversibile della radiazione nera $\frac{\nu}{T}$ \'e costante. Radiazione contenuta in cubo di lato L con pareti riflettenti: all'equilibrio sono permessi valori discreti delle frequenze.
+                            \begin{align*}
+                                &lL=\frac{n_1\lambda}{2},\ mL=\frac{n_2\lambda}{2},\ nL=\frac{n_3\lambda}{2}\tag*{estremi sono nodi}\\
+                                &l=\hat{x}\cdot\hat{r},\ m=\hat{y}\cdot\hat{r},\ n=\hat{z}\cdot\hat{r}\\
+                                &(\frac{2\nu L}{c})^2=n_1^2+n_2^2+n_3^2\tag*{\begin{minipage}{0.5\textwidth}interi non variano per trasf. di volume adiabatica\end{minipage}}\\
+                                &\nu L,\ \nu^3V\tag*{invariante trasf. adiabatiche}\\
+                                &P=\frac{4}{3}\pi\sigma/cT^4\tag{corpo nero}\\
+                                &\PDy{V}{S}|_T=\PDy{T}{P}|_V:\ S=\frac{16\pi\sigma}{3c}T^3V\tag{Rel. di Maxwell}\\
+                                \frac{T}{\nu}\tag{invariante per trasf. adiab.}
+                            \end{align*}
+                        \item L'entropia del campo di radiazione pu\'o decomporsi in somma di contributi delle diverse frequenze ciascuno funzione di $\frac{\nu}{T}$. La dispersione dello spettro nelle sue componenti \'e un processo reversibile:
+                            \begin{align*}
+                                &s=\frac{S}{V}=\frac{16\pi\sigma}{3c}T^3=\frac{16\pi E(T)}{3cT}\tag{Entropia per unit vol.}\\
+                                &=\sum_{\nu}s_{\nu}(T)=\num_{\nu}s(\frac{\nu}{T})\tag{trasformazione adiabatica}
+                            \end{align*}
+                        \item L'energia \'e somma di contributi funzione di $\frac{\nu}{T}$ moltiplicata per $\nu$ o $T$: si ottiene la forma di $E(\nu,T)$ conoscendo il numero di frequenze stazionarie tra $(\nu,\nu+d\,\nu)$, proporzionale a $\nu^2$:
+                            \begin{align*}
+                                &E(T)=\sum_{\nu}e_{\nu}(T):\ e_{\nu}(T)\propto Ts_{\nu}(T)\\
+                                &e_{\nu}=Tg_1(\frac{\nu}{T})=\nu g_2(\frac{\nu}{T})\\
+                                &E(T)=\sum_{\nu}\nu g_2(\frac{\nu}{T})\to\int\nu g_2(\frac{\nu}{T})z(\nu)d\,\nu\\
+                                &E(\nu,T)=\nu g_2(\frac{\nu}{T})z(\nu)\tag{densit\'a di energia}
+                            \end{align*}
+                        \item Calcolo densit\'a $z(\nu)$ dei modi di vibrazione in una scatola:
+                            \begin{align*}
+                                &(\frac{2\nu L}{c})^2=n_1^2+n_2^2+n_3^2: \nu=(n_1^2+n_2^2+n_3^2)\expy{1/2}\frac{c}{2L}\\
+                                &\nu<(n_1^2+n_2^2+n_3^2)\expy{1/2}\frac{c}{2L}<\nu+d\,\nu\tag{what volume has the region?}\\
+                                &\frac{1}{8}*\frac{4\pi\nu^2d\,\nu}{(\frac{c}{2L})^3}\tag{singolo ottante, volume guscio/volume cella}\\
+                                &z(\nu)d\,\nu=2*\frac{4\pi\nu^2}{c^3}d\,\nu\tag{pol. ort come modi indip.}
+                            \end{align*}
+                    \end{itemize}
+        \section{Plank: l'ipotesi dei quanti}
+            \subsection{Plank e il nuovo uso della termodinamica}
+                Planck considera un insieme di oscillatori e la loro interazione con radiazione EM; appena saputi i risultati di Rubens e Karlbaum Planck osserva che detta $\epsilon$ l'energia di un oscillatore e s la sua entropia:
+                \begin{align*}
+                    &\PtwoDy{\epsilon}{s}=-\frac{1}{a\epsilon}\tag{a: const. caratteristica dell'oscillatore - assunzione}\\
+                    &\frac{1}{T}=\PDy{U}{S}\tag{integrando sopra e usando questa:}\\
+                    &\frac{1}{T}=-\frac{1}{a}\ln{\frac{\epsilon}{b}}:\ \epsilon=b\exp{-\frac{a}{T}}\tag{\begin{minipage}{0.5\textwidth}b const caratteristica oscillatore - moltiplicata per $z_{\nu}$:\end{minipage}}\\
+                    &E(\nu,T)=a\nu^3\exp{-\gamma(\frac{\nu}{T})}\tag{proposta wien 1896}
+                \end{align*}
+                Si pu\'o ipotizzare che la derivata seconda dell'entropia dipenda anche da $\epsilon\expy{-2}$:
+                \begin{align*}
+                    &\PtwoDy{\epsilon}{s}=-\frac{a}{\epsilon^2+\gamma\epsilon}:\ \frac{1}{T}=\PDy{\epsilon}{s}=\frac{a}{\gamma}\ln{\frac{\gamma+\epsilon}{\epsilon}}\\
+                    &\epsilon=\frac{\gamma}{\exp{\frac{aT}{\gamma}}-1}\tag{Se $\gamma,\frac{a}{\gamma}\propto\nu$:}\\
+                    &E(\nu,T)=z(\nu)*\epsilon=\frac{A\nu^3}{\exp{B \frac{\nu}{T}}-1}
+                \end{align*}
+                Nella trattazione di Rayleigh risulta errato l'assegnazione di energia media costante a ciascuno degli infiniti modi di vibrazione; Planck giunge invece a un'espressione media $\overbar{\epsilon}$ per ogni oscillatore che dipende da $\nu$ e che compensa andamento divergente di $z(\nu)$. Per applicare il procedimento di Boltzmann deve calcolare l'entropia mediante il numero dei modi in cui l'energia totale degli oscillatori che interagiscono col campo pu\'o ripartirsi tra i singoli oscillatori: supponiamo $z_{\nu}$ oscillatori di frequenza $\nu$, etc, e che l'energia totale $E_t$ del sistema compaia come energia radiante e in parte come energia di oscillazione ($E_0<E_t$); calcolare come si distribuisce nello stato stazionario l'energia tra gli oscillatori equivale a calcolare come si distribuisce tra le diverse frequenze.
+                \begin{align*}
+                    &E+E'+\ldots=E_0\tag{$E$ a oscillatori $z_{\nu}$, $E'$ a $z_{\nu'}$, $\ldots$}\\
+                    &\epsilon_0=h\nu\propto\nu\tag{forma necessaria per legge Wien}\\
+                    &E=z_{\nu}\overbar{\epsilon}=n_{\nu}\epsilon_0\tag*{$\overbar{\epsilon}$ energia media oscillatore}\\
+                    &N=\sum_{\nu}n_{\nu}\tag{\begin{minipage}{0.5\textwidth}numero quanti presenti a dato istante  tra $z_{\nu}+z_{\nu'}\ldots$ osc.\end{minipage}}\\
+                    &W_{\nu}=\frac{(z_{\nu}+n_{\nu}-1)!}{(z_{\nu}-1)!n_{\nu}!}\tag{\begin{minipage}{0.5\textwidth}numero modi di ripartire gli $n_{\nu}$ elementi di energia identici tra $z_{\nu}$ oscillatori\end{minipage}}\\
+                    &S=k\ln{W}
+                \end{align*}
+                quindi usando approx Stirling:
+                \begin{align*}
+                    &S_{z,\nu}=sz_{\nu}=k\ln{W_{\nu}}\approxk\ln{\frac{(z_{\nu}+n_{\nu})^{z_{\nu}+n_{\nu}}}{z_{\nu}^{z_{\nu}}n_{\nu}^{n_{\nu}}}}\\
+                    &s=k[(\frac{n_{\nu}}{z_{\nu}})\ln{(\frac{n_{\nu}}{z_{\nu}}+1)}-\frac{n_{\nu}}{z_{\nu}}\ln{\frac{n_{\nu}}{z_{\nu}}}]=k[(\frac{\overbar{\epsilon}}{h\nu}+1)\ln{(\frac{\overbar{\epsilon}}{h\nu}+1)}-\frac{\overbar{\epsilon}}{h\nu}\ln{\frac{\overbar{\epsilon}}{h\nu}}]
+                \end{align*}
+                A quest punto Planck potrebbe calcolare il valore degli $n_{\nu}$ che massimizza l'entropia (con vincolo energia totale dato che numero di quanti non si conserva) e quindi risalire all'energia media di singolo oscillatore e quindi alla distr. di energia nello spettro di radiazione; tuttavia Planck:
+                \begin{align*}
+                    &\PDy{\overbar{\epsilon}}{s}=\frac{1}{T}=\frac{k}{h\nu}\ln{(1+\frac{h\nu}{\overbar{\epsilon}})}\\
+                    &\overbar{\epsilon}=\frac{h\nu}{exp{\frac{h\nu}{kT}}-1}\tag{energia media oscillatore $\nu$}\\
+                    &\lim_{h\to0}\overbar{\epsilon}(\nu,T)=\frac{h\nu}{1+(\frac{h\nu}{kT})+\ldots-1}=kT\tag{equipartizione classica}\\
+                    &E(\nu,T)d\,\nu=\frac{c}{4\pi}d(\nu,T)d\,\nu=\frac{c}{4\pi}z(\nu)\overbar{\epsilon}(\nu,T)d\,\nu\\
+                    &=\frac{2h}{c^2}\nu^3 \frac{1}{\exp{\frac{h\nu}{kT}}-1}
+                \end{align*}
+                Perch\'e Planck ha ottenuto risultato corretto senza calcolare distrib. di equlibrio (massimo entropia)? Klein (1962): $W_{\nu}$ equivale a $\sum W$ fattore di normalizzazione di Boltzmann
 \part{Ripeto EM}
 
 \part{Ripeto scattering}
@@ -301,6 +377,4 @@
 
 \part{Ripeto QM-Atomo d'idrogeno}
 
-\part{Principio di Kirchhoff}
-     \khhff{} ha dimostrato per via termodinamica nel 1860 che per un corpo in equilibrio termodinamico
 %\end{document}
